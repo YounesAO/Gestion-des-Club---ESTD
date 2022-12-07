@@ -9,6 +9,10 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 $userName=$_POST['userName'];
 //inserer les in formation 
-$sql = 'INSERT INTO User values (?,?,?,?,?,?)';
-
+$sql = 'INSERT INTO user(nom,prenom,cne,email,password,userName) values ("'.$nom.'","'.$prenom.'","'.$cne.'","'.$email.'","'.$password.'","'.$userName.'")';
+if (mysqli_query($con, $sql)) {
+    echo "inscription done";
+ } else {
+    echo "Error: " . $sql . ":-" . mysqli_error($con);
+ }
 ?>
