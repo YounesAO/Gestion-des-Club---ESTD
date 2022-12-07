@@ -1,5 +1,5 @@
 <?php
-//Improter la connection à la base de données
+//Importer la connection à la base de données
 require 'dbConnect.php';
 
 ?>
