@@ -1,1 +1,1 @@
-welcom to the repository for gi program
+welcome to the repository for gi program
