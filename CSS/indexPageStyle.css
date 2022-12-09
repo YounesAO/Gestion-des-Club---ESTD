@@ -9,10 +9,9 @@ nav .container .navbar-nav .nav-item a {
     color: black;
 }
 nav .container .navbar-nav .nav-item {
-    padding: 25px;
+    padding: 5px 16px;
     font-size: 18px;
-    min-height: 72px;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
     position: relative;
 }
 nav .container .navbar-nav .nav-item:hover {
@@ -27,10 +26,26 @@ nav .container .navbar-nav .nav-item::before {
     bottom: 0;
     left: 0;
     background-color: #1a3a76;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
 }
 nav .container .navbar-nav .nav-item:hover:before {
     width: 100%;
+}
+@media (min-width: 992px) {
+    .collapse {
+        max-width: fit-content;
+    }
+    nav .container .navbar-nav .nav-item {
+        padding: 25px;
+        min-height: 72px;
+    }
+}
+@media (max-width: 992px) {
+    nav .container .navbar-nav .nav-item::before {
+        height: 100%;
+        top: 0;
+        background-color: rgb(26 58 117 / 15%);;
+    }
 }
 /* end header */
 /* strat main content */
