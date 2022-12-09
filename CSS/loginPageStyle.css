@@ -22,12 +22,14 @@ h4 {
 }
 .form {
     margin: 0 auto;
-    width: 50vw;
+    width: 33vw;
     max-height: fit-content;
 }
 .form div {
-    background-color: white;
+    background-color: rgb(231, 231, 231);
     padding: 16px;
+    border-radius: 0 0 10px 10px;
+
 }
 label {
     color: #777777;
@@ -46,6 +48,10 @@ button {
     padding: 8px 15px;
     border-radius: 4px;
     margin-top: 10px;
+}
+button:hover{
+    transition: 300ms;
+    background-color: #b3e5fc;
 }
 img {
     display: block;
