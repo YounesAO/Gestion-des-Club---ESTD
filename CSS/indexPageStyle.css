@@ -49,9 +49,8 @@ nav .container .navbar-nav .nav-item:hover:before {
 }
 /* end header */
 /* strat main content */
-main {
-    background-color: #eee;
-    min-height: 10px;
-    width: 100vw;
+.carousel-item img {
+    width: 100%;
+    height: calc(100vh - 93px);
 }
 /* end main content */
