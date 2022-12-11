@@ -1,7 +1,7 @@
 <?php
 //connection a la base de données 
 $host = "localhost";
-$dataBase = "ParascolaireESTD";
+$dataBase = "gestionclub";
 $User = "root";
 $password ="";
 
