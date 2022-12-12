@@ -20,7 +20,7 @@ session_start();
   top: 0;
   width: 100px;
   height: 100%;
-  background-color: #D2D2D2;
+  background-color: #8A97BF;
 }
 ul{
     display :flex ;
@@ -30,6 +30,10 @@ ul{
 
 }
 li{
+  display:flex;
+  flex-direction: column;
+  justify-content :center;
+  align-items:center;
     margin-top: 10px;
     font-size: large;
 }
@@ -38,24 +42,61 @@ li{
     display: flex;
     flex-direction: column;
 }
+li img{
+  width : 80px;
+  
+}
+li a{
+  color:white;
+text-decoration:none;
+font-size : large;
+}
+.home span{
+  font-family: "Poppins 500","Noto Sans Regular","Helvetica Neue",Arial,sans-serif;
+  font-weight:bold;
+  padding:10px;
+  margin-left : 0px;
+  font-size: 18px;
+  color: black;
+  background-color:#D2D2D2;
+
+}
+.home div button {
+  color :white;
+}
+.logout{
+  margin-top: 50vh;
+  color :red;
+  border :1px solid red ;
+  padding :3px;
+  border-radius:5px
+}
+.logout:hover{
+  transition :500ms;
+  background-color :red;
+  color :#D2D2D2;
+}
 </style>
 
     <nav>
     <ul>
-        <li><a href="#home">Home</a></li>
+        <li>
+        <img src="images/logo.png" alt="" srcset="">
+
+        <a href="#home">Home</a></li>
         <li><a href="#about">Clubs</a></li>
         <li><a href="#contact">Chat</a></li>
-        <li><a href="logout.php">Logout</a></li>
+        <li><a class='logout' href="logout.php">Logout</a></li>
 
     </ul>
     </nav>
 <div class="home ">
 <?php echo'
-<h1> welcome '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</h1>';
+<span>  '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span>';
 ?>
     <div class="container-fluid d-flex justify-content-center  m-2">
-        <button class="btn btn-warning p-3 m-1 col-sm-3 " type="button"  data-bs-toggle="modal" data-bs-target="#AddEvent">Proposer un Event</button>
-        <button class="btn btn-warning p-3 m-1 col-sm-3">Proposer un Event</button>
+        <button class="btn shadow btn-warning p-3 m-1 col-sm-3 " type="button"  data-bs-toggle="modal" data-bs-target="#AddEvent">Proposer un Event</button>
+        <button class="btn shadow btn-warning p-3 m-1 col-sm-3">Proposer un Event</button>
 
     </div>
 </div>
@@ -87,8 +128,8 @@ li{
             
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="sublmit"   class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="sublmit"   class="btn btn-primary">Envoyer</button>
       </div>
       </form>
     </div>
