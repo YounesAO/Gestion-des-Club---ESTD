@@ -52,7 +52,7 @@ require 'dbConnect.php'
         <input type="password" name="password" id="password"><br>
         <Label for ="cne">CNE      : </Label><br>
         <input type="text" name="cne" id="cne"><br>
-        <Label for ="email">Mot de passe      : </Label><br>
+        <Label for ="email">Email     : </Label><br>
         <input type="email" name="email" id="email"><br>
         <button value ='submit'>Valide</button>
     </form>
