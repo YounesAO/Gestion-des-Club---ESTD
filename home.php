@@ -46,7 +46,7 @@ li img{
   width : 80px;
   
 }
-li a{
+.nav-link{
   color:white;
 text-decoration:none;
 font-size : large;
@@ -76,30 +76,71 @@ font-size : large;
   background-color :red;
   color :#D2D2D2;
 }
+.card{
+margin : 10px;
+}
 </style>
 
     <nav>
-    <ul>
-        <li>
+    <ul class="nav nav-tabs">
+        <li class ="nav-item">
         <img src="images/logo.png" alt="" srcset="">
 
-        <a href="#home">Home</a></li>
-        <li><a href="#about">Clubs</a></li>
-        <li><a href="#contact">Chat</a></li>
-        <li><a class='logout' href="logout.php">Logout</a></li>
+        <a class="nav-link" data-bs-toggle="pill"   href="#home">Home</a>
+      </li>
+        <li class ="nav-item">
+          <a class="nav-link" data-bs-toggle="pill"  href="#clubs">Clubs</a>
+        </li>
+        <li class ="nav-item">
+          <a class="nav-link" data-bs-toggle="pill" href="#contact">Chat</a>
+        </li>
+        <li class ="nav-item">
+          <a class="nav-link logout" href="logout.php">Logout</a></li>
 
     </ul>
     </nav>
-<div class="home ">
-<?php echo'
-<span>  '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span>';
-?>
+
+
+<div class="tab-content">
+  <div class="tab-pane home container active" id="home">
+  <?php echo'
+  <span>  '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span>';
+  ?>
     <div class="container-fluid d-flex justify-content-center  m-2">
         <button class="btn shadow btn-warning p-3 m-1 col-sm-3 " type="button"  data-bs-toggle="modal" data-bs-target="#AddEvent">Proposer un Event</button>
-        <button class="btn shadow btn-warning p-3 m-1 col-sm-3">Proposer un Event</button>
 
     </div>
+  </div>
+  <div class="tab-pane container d-flex fade" id="clubs">
+  <div class="card" style="width:200px">
+    <img class="card-img-top" src="images\logo1.png" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title">Club 2</h4>
+        <p class="card-text">Some example text.</p>
+        <div>
+        <a href="#" class="btn btn-primary">Intéger</a>
+       </div>
+
+    </div>
+
+  </div>
+
+  <div class="card" style="width:200px">
+    <img class="card-img-top" src="images\logo1.png" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title">Club 1</h4>
+        <p class="card-text">Some example text.</p>
+        <div>
+        <a href="#" class="btn btn-primary">Intéger</a>
+        
+        </div>
+    </div>
+  <div class="tab-pane container fade" id="contact">...</div>
 </div>
+
+
+
+
 
 
 
@@ -112,7 +153,27 @@ font-size : large;
         <h5 class="modal-title" id="exampleModalLabel">Proposer un evenement</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      
+      <div class="tab-content">
+    <div class="tab-pane container home active" id="home">
+    <span> HIGH TECH</span>
+   
+    </div>
+
+  <div class="tab-pane container fade" id="requests">
+    <h3>requests d'integration du votre club </h3>
+    <div class="card" style="width:400px">
+    <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text.</p>
+        <div>
+        <a href="#" class="btn btn-primary">Accepter</a>
+        <a href="#" class="btn btn-danger">Refuser</a>
+        </div>
+    </div>
+</div>
+  </div>
+  
       <div class="modal-body">
        
        		<div>

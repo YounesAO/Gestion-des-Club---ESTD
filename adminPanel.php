@@ -88,6 +88,9 @@ font-size : large;
     margin-left: 150px;
     margin-top: 10px;
 }
+.tab-pane h3{
+color : white;
+}
 </style>
 <nav>
     <ul class="nav nav-tabs">
@@ -96,8 +99,8 @@ font-size : large;
 
         <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#requests">Requests</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#contact">Chat</a></li>
-        <li class="nav-item"><a class='logout nav-link' data-bs-toggle="tab" href="logout.php">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#events">Event propose</a></li>
+        <li class="nav-item"><a class='logout nav-link' S href="logout.php">Logout</a></li>
 
     </ul>
     </nav>
@@ -107,18 +110,12 @@ font-size : large;
 <!-- Tab panes -->
 <div class="tab-content">
     <div class="tab-pane container home active" id="home">
-    <?php echo'
-    <span>  '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span>';
-    ?>
-    <div class="container-fluid d-flex justify-content-center  m-2">
-        <button class="btn shadow btn-warning p-3 m-1 col-sm-3 " type="button"  data-bs-toggle="modal" data-bs-target="#AddEvent">Proposer un Event</button>
-        <button class="btn shadow btn-warning p-3 m-1 col-sm-3">Proposer un Event</button>
-
-    </div>
+    <span> HIGH TECH</span>
+   
     </div>
 
   <div class="tab-pane container fade" id="requests">
-    <h3>club integration reauests </h3>
+    <h3>requests d'integration du votre club </h3>
     <div class="card" style="width:400px">
     <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
     <div class="card-body">
@@ -131,7 +128,20 @@ font-size : large;
     </div>
 </div>
   </div>
-  <div class="tab-pane container fade" id="menu2">...</div>
+  <div class="tab-pane container fade" id="events">
+  <h3>Evenement proposés par les membres </h3> <br>
+
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="images\logo1.png" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title">Event</h4>
+        <p class="card-text">Proposer par username</p>
+        <div>
+        <a href="#" class="btn btn-primary">Valider</a>
+        <a href="#" class="btn btn-danger">Refuser</a>
+        </div>
+    </div>
+  </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
