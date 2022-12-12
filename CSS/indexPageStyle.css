@@ -1,3 +1,7 @@
+:root {
+    --main-color : #1a3a76;
+    --second-color : rgb(236, 236, 236);
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -52,5 +56,133 @@ nav .container .navbar-nav .nav-item:hover:before {
 .carousel-item img {
     width: 100%;
     height: calc(100vh - 93px);
+}
+.Actualités_and_Annonces {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.titles {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px black solid;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    max-height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titles::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -50px;
+    background: var(--main-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition-duration: 0.3s;
+    z-index: -5;
+}
+.titles::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -50px;
+    background: var(--main-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition-duration: 0.3s;
+    z-index: -5;
+}
+.titles:hover {
+    color: white;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+    border-color: transparent;
+}
+.titles:hover::before {
+    left: 0;
+    animation-name: title-transform;
+    animation-duration: 0.3s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.titles:hover::after {
+    right: 0;
+    animation-name: title-transform;
+    animation-duration: 0.3s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes title-transform {
+    0% {
+        width: 12px;
+        height: 12px;
+        border-radius: 0%px;
+    }
+    100% {
+        width: 51%;
+        height: 100%; 
+        border-radius: 0px;
+    }
+}
+.lesAnnounces {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    border-radius: 10px;
+}
+.announce {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    overflow: hidden;
+}
+.announce:hover {
+    transform: translateY(-5px);
+}
+.announce img {
+    max-width: 100%;
+}
+.announce a {
+    color: var(--main-color);
+}
+.announce i {
+    margin-right: 10px;
+}
+.announce:hover i {
+    animation: arrow-rgiht-animation 1s infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes arrow-rgiht-animation {
+    form {
+        margin-right: 10px;
+    }
+    to {
+        margin-right: 0px;
+    }
+}
+.announce .footer_of_announce {
+    padding: 15px;
+    border-top: 1px #efeff0 solid;
+    color: var(--main-color) !important;
+    text-transform: capitalize;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width : 520px) {
+    .titles {
+        font-size: 16px;
+    }
 }
 /* end main content */

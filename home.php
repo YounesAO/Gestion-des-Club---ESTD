@@ -103,9 +103,9 @@ margin : 10px;
 
 <div class="tab-content">
   <div class="tab-pane home container active" id="home">
-  <?php echo'
+  <!-- <?php echo'
   <span>  '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span>';
-  ?>
+  ?> -->
     <div class="container-fluid d-flex justify-content-center  m-2">
         <button class="btn shadow btn-warning p-3 m-1 col-sm-3 " type="button"  data-bs-toggle="modal" data-bs-target="#AddEvent">Proposer un Event</button>
 

@@ -13,6 +13,7 @@ require 'dbConnect.php';
     <title>Accueil</title>
     <!-- css -->
     <link rel="stylesheet" href="CSS/indexPageStyle.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="CSS/all.min.css">
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
@@ -28,6 +29,7 @@ require 'dbConnect.php';
 
 <body>
     <header>
+        <!-- start navbar -->
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container">
                 <span class="navbar-brand" href="#">
@@ -55,8 +57,10 @@ require 'dbConnect.php';
                 </div>
             </div>
         </nav>
+        <!-- end navbar -->
     </header>
     <main>
+        <!-- start slide -->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -93,6 +97,53 @@ require 'dbConnect.php';
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- end slide -->
+        <!-- start Actualités & Annonces -->
+        <div class="Actualités_and_Annonces">
+            <div class="container">
+                <header>
+                    <div class="titles">
+                        Actualités & Annonces
+                    </div>
+                </header>
+                <div class="lesAnnounces">
+                    <div class="announce">
+                        <img src="images/icon-annonce.png" alt="">
+                        <div class="p-3">
+                            <h3>test title</h3>
+                            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
+                        </div>
+                        <div class="footer_of_announce">
+                            <a href="">read more</a>
+                            <i class="fa fa-arrow-right fa-fw"></i>
+                        </div>
+                    </div>
+                    <div class="announce">
+                        <img src="images/icon-annonce.png" alt="">
+                        <div class="p-3">
+                            <h3>test title</h3>
+                            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
+                        </div>
+                        <div class="footer_of_announce">
+                            <a href="">read more</a>
+                            <i class="fa fa-arrow-right fa-fw"></i>
+                        </div>
+                    </div>
+                    <div class="announce">
+                        <img src="images/visite_estd.jpg" alt="">
+                        <div class="p-3">
+                            <h3>test title</h3>
+                            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
+                        </div>
+                        <div class="footer_of_announce">
+                            <a href="">read more</a>
+                            <i class="fa fa-arrow-right fa-fw"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Actualités & Annonces -->
     </main>
 
 </html>
