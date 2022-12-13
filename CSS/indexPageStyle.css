@@ -51,6 +51,9 @@ nav .container .navbar-nav .nav-item:hover:before {
         background-color: rgb(26 58 117 / 15%);;
     }
 }
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
 /* end header */
 /* strat main content */
 .carousel-item img {
@@ -187,3 +190,81 @@ nav .container .navbar-nav .nav-item:hover:before {
     }
 }
 /* end main content */
+/* start footer */
+footer {
+    text-transform: capitalize;
+    color: white;
+}
+footer .lesCoordonnees {
+    background-image: url("../images/footer-bg-img.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.theFirstPart0fFooter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 50px 0;
+}
+.theFirstPart0fFooter .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 0;
+    position: relative;
+    margin-bottom: 15px;
+}
+.theFirstPart0fFooter .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #e13833;
+    transform: translateY(-50%);
+}
+.theFirstPart0fFooter .aPropos > div > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.theFirstPart0fFooter .aPropos > div > div i {
+    flex-basis: auto;
+}
+.theFirstPart0fFooter .aPropos > div > div div {
+    flex-grow: 2;
+}
+.theFirstPart0fFooter .gallery .container-of-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(calc(100% / 3 - 20px),1fr));
+    gap: 20px;
+}
+.theFirstPart0fFooter .gallery .container-of-images img {
+    max-width: 100%;
+}
+.theSecondPartOfFooter {
+    background-color: #001736;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+}
+@media (max-width : 345px) {
+    .theFirstPart0fFooter .gallery .container-of-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .theFirstPart0fFooter .gallery .container-of-images img {
+        max-width: calc(95vw - (var(--bs-gutter-x)));
+    }
+    .titles::before {
+        left: -30px;
+    }
+    .titles {
+        font-size: 12px;
+    }
+    .titles::after {
+        right: -30px;
+    }
+}
+/* end footer */

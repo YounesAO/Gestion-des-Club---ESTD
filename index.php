@@ -152,5 +152,48 @@ require 'dbConnect.php';
         </div>
         <!-- end Actualités & Annonces -->
     </main>
+    <!-- start footer -->
+    <footer>
+        <div class="lesCoordonnees">
+            <div class="container theFirstPart0fFooter">
+                <div class="aPropos">
+                    <div class="title">a propos</div>
+                    <div>
+                        <div>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            <div>ecole supérieur de la technologie dakhla , oum bouir</div>
+                        </div>
+                        <div>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <div class="phone">
+                                <span>+212-528-00-00-00</span>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <div class="phone">
+                                <span>+212-528-00-00-00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="title">gallery</div>
+                    <div class="container-of-images">
+                        <img src="images/event1.jpg" alt="" srcset="">
+                        <img src="images/event2.jpg" alt="" srcset="">
+                        <img src="images/event1.jpg" alt="" srcset="">
+                        <img src="images/event2.jpg" alt="" srcset="">
+                        <img src="images/event1.jpg" alt="" srcset="">
+                        <img src="images/event2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theSecondPartOfFooter">
+            <p>© 2021,EST Dakhla. Tous les droits sont réservés.</p>
+        </div>
+    </footer>
+    <!-- end footer -->
 
 </html>
