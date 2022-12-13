@@ -72,14 +72,21 @@ require 'dbConnect.php';
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/event1.jpeg" class="d-block w-100" alt="...">
+                    <img src="images/event1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="images/event2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/event2.jpeg" class="d-block mw-100" alt="...">
+                    <img src="images/visite_estd.jpg" class="d-block mw-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
@@ -108,7 +115,7 @@ require 'dbConnect.php';
                 </header>
                 <div class="lesAnnounces">
                     <div class="announce">
-                        <img src="images/icon-annonce.png" alt="">
+                        <img src="images/event2.jpg" alt="">
                         <div class="p-3">
                             <h3>test title</h3>
                             <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
@@ -119,7 +126,7 @@ require 'dbConnect.php';
                         </div>
                     </div>
                     <div class="announce">
-                        <img src="images/icon-annonce.png" alt="">
+                        <img src="images/event1.jpg" alt="">
                         <div class="p-3">
                             <h3>test title</h3>
                             <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
