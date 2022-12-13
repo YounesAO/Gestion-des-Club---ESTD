@@ -9,7 +9,7 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 $userName=$_POST['userName'];
 //inserer les in formation 
-$sql = 'INSERT INTO user(nom,prenom,cne,email,password,userName) values ("'.$nom.'","'.$prenom.'","'.$cne.'","'.$email.'","'.$password.'","'.$userName.'")';
+$sql = 'INSERT INTO etudiant(nomEtudiant,prenomEtudiant,CNE,email,password,userName) values ("'.$nom.'","'.$prenom.'","'.$cne.'","'.$email.'","'.$password.'","'.$userName.'")';
 if (mysqli_query($con, $sql)) {
     echo "inscription done";
  } else {
