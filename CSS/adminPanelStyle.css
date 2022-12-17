@@ -1,0 +1,104 @@
+
+  body{
+    background-color:#606E82;
+} 
+nav {
+position: fixed;
+left: 0;
+top: 0;
+width: 120px!important;
+height: 100%;
+background-color:#204473;
+}
+ul{
+display :flex ;
+flex-direction: column;
+text-decoration: none;
+padding: 5px;
+
+}
+li{
+display:flex;
+flex-direction: column;
+justify-content :center;
+align-items:center;
+margin-top: 10px;
+font-size: large;
+}
+.home{
+
+display: flex;
+flex-direction: column;
+}
+li img{
+width : 80px;
+-webkit-filter: grayscale(100%); /*black qnd zhit filter*/
+filter: grayscale(100%) invert();
+
+}
+li a{
+color:rgba(252, 252, 252, 0.7);
+text-decoration:none;
+font-size : large;
+}
+.home #club{
+position: absolute;
+right: 0;
+font-weight:bold;
+padding:10px;
+margin-right : 10px;
+font-size: 18px;
+color: black;
+background-color:#ffffff;
+
+}
+.home .nbMember{
+  width: 15rem;
+  padding:30PX 50PX 30PX 50PX;
+  border-radius: 5px;
+  font-size: X-large;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(228, 208, 32);
+}
+.widgets{
+  justify-content: space-between;
+}
+.nbMember:hover{
+
+transition: 300ms;
+  transform:scale(1.1);
+}
+.nextEvent {
+  color: white;
+  background-color: rgb(167, 20, 167)!important;
+}
+.nextEventText{
+  font-size: x-small;
+}
+.home div button {
+color :white;
+}
+.logout{
+margin-top: 30vh;
+color :red;
+border :1px solid red ;
+padding :3px;
+border-radius:5px
+}
+.logout:hover{
+transition :500ms;
+background-color :red;
+color :#D2D2D2;
+}
+.nav-link{
+width:100%;
+text-align:center;
+}
+.tab-pane {
+margin-left: 150px;
+margin-top: 10px;
+}
+.tab-pane h3{
+color : white;
+}

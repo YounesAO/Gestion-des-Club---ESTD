@@ -9,109 +9,39 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="CSS/adminPanelStyle.css">
+    <script src="https://kit.fontawesome.com/aad16206da.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<style>
-body{
-        background-color:#606E82;
- } 
-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 120px!important;
-  height: 100%;
-  background-color:#204473;
-}
-ul{
-    display :flex ;
-    flex-direction: column;
-    text-decoration: none;
-    padding: 5px;
 
-}
-li{
-  display:flex;
-  flex-direction: column;
-  justify-content :center;
-  align-items:center;
-    margin-top: 10px;
-    font-size: large;
-}
-.home{
-   
-    display: flex;
-    flex-direction: column;
-}
-li img{
-  width : 80px;
-  -webkit-filter: grayscale(100%); /*black qnd zhit filter*/
-  filter: grayscale(100%) invert();
-  
-}
-li a{
-  color:rgba(205,217,229,0.7);
-text-decoration:none;
-font-size : large;
-}
-.home span{
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-weight:bold;
-  padding:10px;
-  margin-left : 0px;
-  font-size: 18px;
-  color: black;
-  background-color:#D2D2D2;
 
-}
-.home div button {
-  color :white;
-}
-.logout{
-  margin-top: 50vh;
-  color :red;
-  border :1px solid red ;
-  padding :3px;
-  border-radius:5px
-}
-.logout:hover{
-  transition :500ms;
-  background-color :red;
-  color :#D2D2D2;
-}
-.nav-link{
-    width:100%;
-    text-align:center;
-}
-.tab-pane {
-    margin-left: 150px;
-    margin-top: 10px;
-}
-.tab-pane h3{
-color : white;
-}
-</style>
 <nav>
     <ul class="nav nav-tabs">
         <li class="nav-item">
         <img src="images/logo.png" alt="" srcset="">
 
-        <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#requests">Requests</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#events">Event propose</a></li>
-        <li class="nav-item"><a class='logout nav-link' S href="logout.php">Logout</a></li>
+        <a class="nav-link active" data-bs-toggle="tab" href="#home"><i class="fa fa-home" aria-hidden="true"></i> </a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#requests"> <i class="fa fa-user-circle" aria-hidden="true"></i></i></a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#events"><i class="fas fa-newspaper    "></i></a></li>
+        <li class="nav-item"><a class='logout nav-link' S href="logout.php"><i class="fas fa-door-open    "></i></a></li>
 
     </ul>
     </nav>
-<div class="home ">
 
-</div>
 <!-- Tab panes -->
 <div class="tab-content">
     <div class="tab-pane container home active" id="home">
-    <span> HIGH TECH</span>
-   
+    <span id="club"> HIGH TECH</span>
+   <div class="d-flex widgets ">
+        <div class="nbMember shadow" >
+          <span>200  <i class="fa fa-user" aria-hidden="true"></i></span>
+          <p class="nextEventText">Membres</p>
+        </div>
+        <div class="nbMember shadow nextEvent" >
+          <p class ="nextEventText"><i class="fa fa-calendar" aria-hidden="true"></i> next event </p>
+          <span>20-09-2023  </i></span>
+        </div>
+   </div>
     </div>
 
   <div class="tab-pane container fade" id="requests">
