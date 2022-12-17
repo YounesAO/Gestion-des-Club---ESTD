@@ -10,76 +10,10 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil Espace Etudiant</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="CSS/homeStyle.css">
 </head>
 <body>
- <style>
-        nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100px;
-  height: 100%;
-  background-color: #8A97BF;
-}
-ul{
-    display :flex ;
-    flex-direction: column;
-    text-decoration: none;
-    padding: 5px;
-
-}
-li{
-  display:flex;
-  flex-direction: column;
-  justify-content :center;
-  align-items:center;
-    margin-top: 10px;
-    font-size: large;
-}
-.home{
-    margin-left: 100px;
-    display: flex;
-    flex-direction: column;
-}
-li img{
-  width : 80px;
-  
-}
-.nav-link{
-  color:white;
-text-decoration:none;
-font-size : large;
-}
-.home span{
-  font-family: "Poppins 500","Noto Sans Regular","Helvetica Neue",Arial,sans-serif;
-  font-weight:bold;
-  padding:10px;
-  margin-left : 0px;
-  font-size: 18px;
-  color: black;
-  background-color:#D2D2D2;
-
-}
-.home div button {
-  color :white;
-}
-.logout{
-  margin-top: 50vh;
-  color :red;
-  border :1px solid red ;
-  padding :3px;
-  border-radius:5px
-}
-.logout:hover{
-  transition :500ms;
-  background-color :red;
-  color :#D2D2D2;
-}
-.card{
-margin : 10px;
-}
-</style>
+ 
 
     <nav>
     <ul class="nav nav-tabs">
