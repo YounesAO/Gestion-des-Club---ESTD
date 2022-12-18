@@ -11,7 +11,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background: repeating-linear-gradient(352deg, #1a3a76, transparent 1px);
+    background: linear-gradient(180deg, #001736, #204473);
 }
 .ajouterClube {
     width: 50%;
