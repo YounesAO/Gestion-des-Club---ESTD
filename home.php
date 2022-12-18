@@ -28,16 +28,16 @@ session_start();
         <li class ="nav-item">
         <img src="images/logo.png" alt="" srcset="">
 
-        <a class="nav-link" data-bs-toggle="tab"   href="#home"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        <a class="nav-link" data-bs-toggle="tab"   href="#home"> <i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a>
       </li>
         <li class ="nav-item">
-          <a class="nav-link" data-bs-toggle="tab"  href="#clubs"><i class="fa-solid fa-users"></i> Clubs</a>
+          <a class="nav-link" data-bs-toggle="tab"  href="#clubs"><i class="fa-solid fa-users"></i> <span>Clubs</span></a>
         </li>
         <li class ="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#create"><i class="fa-solid fa-square-plus"></i> Create</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#create"><i class="fa-solid fa-square-plus"></i> <span>Create</span></a>
         </li>
         <li class ="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#inbox"><i class="fa-solid fa-bullhorn"></i>Inbox</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#inbox"><i class="fa-solid fa-bullhorn"></i><span>Inbox</span></a>
         </li>
         <li class ="nav-item">
           <a class="nav-link logout" href="logout.php"><i class="fa-solid fa-door-closed"></i>Logout</a>
@@ -83,82 +83,18 @@ session_start();
   </div>
 
   <div class="tab-pane container fade" id="create">
-    <h1>Créer un club</h1>
-    <form action="addClub.php" method="POST">
-      <table BORDER="2px">
-        <tr>
-          <th>
-          <label for="nomClub">Nom du Club</label>
-          </th>
-          <th>
-            <input type="text" name="nomClub">
-          </th>
-          
-        </tr>
-        <tr>
-          <td>
-          <label for="imgClub">logo du Club</label>
-          </td>
-          <td>
-            <input type="file" name="imgClub">
-          </td>
-          
-        </tr>
-        <tr>
-          <td>
-          <label for="descClub">description du Club</label>
-          </td>
-
-          <td>
-            <textarea name="descClub" id="descClub" cols="30" rows="2"></textarea>
-            
-          </td>
-          
-        </tr>
-      </table>
-    <button class="btn shadow btn-warning p-3 m-1 col-sm-3 " type="submit" >Créer Club</button>
-    </form>
+      <h1>Créer un club</h1>
+      <p>la durée de la creation des nouveaux clubs,sera expiré  le <span class='deadline'>23/10</span></p>
+      <a class='btn btn-warning p-2 shadow ' href="createClube.php">Start la procedure</a>
+    
   </div>
 
   <div class="tab-pane container fade" id="inbox">
-    <h1>Votre messages</h1>
-  </div>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="AddEvent" tabindex="-1" aria-labelledby="AddEvent" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    <form action="proposeEvent.php" method="POST">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Proposer un evenement</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      <h1>Announces</h1>
       
-  
-      <div class="modal-body">
-       
-       		<div>
-               <label for="nomEvent">le nom de l'Event</label>
-                <input name="nomEvent" type="text"><br><br>
-            </div> 
-            <div>
-                <label for="descriptionEvent">la description de l'Event</label>	<br><br>
-                <div class="d-flex justify-content-center">
-                <textarea name="descriptionEvent" id="descriptionEvent" cols="30" rows="3"></textarea>		
-                </div>
-            </div>
-            
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="sublmit"   class="btn btn-primary">Envoyer</button>
-      </div>
-      </form>
-    </div>
+    
   </div>
-</div>
+
 
 <script>
     //modale bootstrap 
