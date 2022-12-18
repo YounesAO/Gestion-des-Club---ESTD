@@ -22,7 +22,8 @@ session_start();
 </head>
 <body>
  
-
+<?php echo'<span class="user"><i class="fa fa-user" aria-hidden="true"></i> <span> '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span></span>';?>
+       
     <nav>
     <ul class="nav nav-tabs">
         <li class ="nav-item">
@@ -50,8 +51,36 @@ session_start();
 <div class="tab-content">
   <div class="tab-pane container active" id="home">
     <h1>Welcome</h1>
-    <?php echo'<span>  '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span>';?>
-        
+    <div class="first">
+    <div class="feed">
+      <div class="post">
+        <div class="post-head">
+          <img class='post-logo' src="images/logo.png" alt="logo">
+          <span class="post-club">ESTD MEDIA</span>
+        </div>
+        <div class="post-body">
+          <img class ="post-img" src="images/event2.jpg" alt="postImg">
+        </div>
+        <div class="post-footer">
+
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-head">
+          <img class='post-logo' src="images/logo.png" alt="logo">
+          <span class="post-club">HIGH TECH</span>
+          
+        </div>
+        <div class="post-body">
+          <img class ="post-img" src="images/event1.jpg" alt="postImg">
+        </div>
+        <div class="post-footer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur cumque omnis a alias quaerat. Illum explicabo sint aperiam esse, inventore magni, aspernatur maiores iure neque minima rem dolor. Nisi?</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
   </div>
 
   <div class="tab-pane container fade" id="clubs">
