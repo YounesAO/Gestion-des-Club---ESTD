@@ -11,6 +11,14 @@ session_start();
     <title>Accueil Espace Etudiant</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/homeStyle.css">
+      <!-- Loading the v6 core styles and the Solid and Brands styles -->
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet">
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\solid.css" rel="stylesheet">
+
+    <!-- update existing v5 CSS to use v6 icons and assets -->
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\v5-font-face.css" rel="stylesheet">
+   
 </head>
 <body>
  
@@ -20,19 +28,19 @@ session_start();
         <li class ="nav-item">
         <img src="images/logo.png" alt="" srcset="">
 
-        <a class="nav-link" data-bs-toggle="tab"   href="#home">Home</a>
+        <a class="nav-link" data-bs-toggle="tab"   href="#home"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
       </li>
         <li class ="nav-item">
-          <a class="nav-link" data-bs-toggle="tab"  href="#clubs">My clubs</a>
+          <a class="nav-link" data-bs-toggle="tab"  href="#clubs"><i class="fa-solid fa-users"></i> Clubs</a>
         </li>
         <li class ="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#create">Create</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#create"><i class="fa-solid fa-square-plus"></i> Create</a>
         </li>
         <li class ="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#inbox">Inbox</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#inbox"><i class="fa-solid fa-bullhorn"></i>Inbox</a>
         </li>
         <li class ="nav-item">
-          <a class="nav-link logout" href="logout.php">Logout</a>
+          <a class="nav-link logout" href="logout.php"><i class="fa-solid fa-door-closed"></i>Logout</a>
         </li>
 
     </ul>

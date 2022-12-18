@@ -102,3 +102,16 @@ margin-top: 10px;
 .tab-pane h3{
 color : white;
 }
+.card{
+  width: 250PX;
+}
+.card-body div {
+  display: flex;
+  justify-content: space-between;}
+
+
+.card-body div  .btn{
+  padding: 3px;
+  width: 100px;
+  font-size: small;
+}

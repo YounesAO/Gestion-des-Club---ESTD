@@ -10,7 +10,13 @@ session_start();
     <title>Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/adminPanelStyle.css">
-    <script src="https://kit.fontawesome.com/aad16206da.js" crossorigin="anonymous"></script>
+     <!-- Loading the v6 core styles and the Solid and Brands styles -->
+     <link href="fontawsome\fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet">
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\solid.css" rel="stylesheet">
+
+    <!-- update existing v5 CSS to use v6 icons and assets -->
+    <link href="fontawsome\fontawesome-free-6.2.1-web\css\v5-font-face.css" rel="stylesheet">
 </head>
 <body>
 
@@ -46,7 +52,7 @@ session_start();
 
   <div class="tab-pane container fade" id="requests">
     <h3>requests d'integration du votre club </h3>
-    <div class="card" style="width:400px">
+    <div class="card" >
     <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
     <div class="card-body">
         <h4 class="card-title">John Doe</h4>
@@ -61,7 +67,7 @@ session_start();
   <div class="tab-pane container fade" id="events">
   <h3>Evenement proposés par les membres </h3> <br>
 
-  <div class="card" style="width:400px">
+  <div class="card" >
     <img class="card-img-top" src="images\logo1.png" alt="Card image">
     <div class="card-body">
         <h4 class="card-title">Event</h4>
