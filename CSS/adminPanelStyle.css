@@ -31,7 +31,7 @@ display: flex;
 flex-direction: column;
 }
 li img{
-width : 80px;
+width : 40px;
 -webkit-filter: grayscale(100%); /*black qnd zhit filter*/
 filter: grayscale(100%) invert();
 
@@ -114,4 +114,56 @@ color : white;
   padding: 3px;
   width: 100px;
   font-size: small;
+}
+@media (max-width: 992px) {
+  nav{
+    position: absolute;
+    top: 0;
+    width: 100%!important;
+    height: 50px;
+  }
+  .nav{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-content{
+    margin-top: 100px;
+  }
+  ul{
+
+    display :flex ;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px;
+    
+    }
+    li{
+    display:flex;
+    flex-direction: row;
+    justify-content :center;
+    align-items:center;
+    margin-top: 0;
+    height: 100%;
+    margin-left: 10px;
+    font-size: large;
+    }
+    .logout{
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-link {
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%-50px;
+    }
 }
