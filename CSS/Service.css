@@ -2,7 +2,6 @@ nav {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 2;
     width: 80px;
     height: 100%;
     background-color: #8A97BF;
@@ -88,33 +87,6 @@ nav {
       display: flex;
       flex-direction: column;
   }
-  .clubs-scroll{
-    position: absolute;
-    left: 0;
-    z-index: 0;
-      background-color: #D2D2D2;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-    }
-    .scroll-item{
-      margin: 5px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-        width: 80px;
-        height: 80px;
-        border-radius: 100%;
-        border:6px  solid #e0d209 ;
-
-    }
-    .scroll-item img{
-      width: 80px;
-      
-  }
   .nav .nav-tabs {
     width: 100%;
     border: none;
@@ -155,7 +127,6 @@ nav {
   background-color:#727d9c;
 }
 
-
 }
 .deadline{
   color: red;
@@ -177,10 +148,8 @@ nav {
       margin-top: 10px;
       font-size: large;
   }
-  .home{
-      margin-left: 66px;
-      display: flex;
-      flex-direction: column;
+  .card{
+     width: 250px;
   }
   li img{
     width : 60px;
@@ -191,7 +160,7 @@ nav {
   text-decoration:none;
   font-size : small;
   }
-  .home span{
+  .club{
     font-family: "Poppins 500","Noto Sans Regular","Helvetica Neue",Arial,sans-serif;
     font-weight:bold;
     padding:10px;
@@ -204,7 +173,14 @@ nav {
   .home div button {
     color :white;
   }
-  
+  .stat-widget{
+    width: 15rem;
+    padding:30PX 50PX 30PX 50PX;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(228, 208, 32);
+  }
   .logout:hover{
     transition :500ms;
     background-color :red!important;
@@ -213,39 +189,26 @@ nav {
   .card{
   margin : 10px;
   }
-  @media (min-width: 992px) {
-    .clubs-scroll{
-    position: absolute;
-    left: 0;
-    z-index: 0;
-      background-color: #D2D2D2;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-    }
-    .scroll-item{
-
-      margin: 5px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-        width: 80px;
-        height: 80px;
-        border-radius: 100%;
-        border:6px  solid #e0d209 ;
-
-    }
-    .scroll-item:hover{
-      transform: scale(1.1);
-      transition: 1s;
-    }
-    .scroll-item img{
-      width: 80px;
-      
+ 
+  .widgets{
+    justify-content: space-between;
   }
+  .stat-num:hover{
+  
+  transition: 300ms;
+    transform:scale(1.1);
+  }
+  .stat-text{
+    font-size: small;
+  }
+  .nextEvent {
+    color: white;
+    background-color: rgb(167, 20, 167)!important;
+  }
+  .nextEventText{
+    font-size: x-small;
+  }
+  @media (min-width: 992px) {
     .logout{
       margin-top: 33%;
       color :red!important;
@@ -289,72 +252,4 @@ nav {
   }
   .tab-content{
     margin-left: 80px;
-  }
-
-}
-.first{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-}
-
-.feed{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #e7e6e6;
-
-  width: 60%;
-}
-
-.post{
-  margin-top: 100px;
-  width: 70%;
-  min-height: fit-content;
-  border-radius: 10px;
-
-}
-.post:hover{
-  transform: scale(1,1);
-
-}
-.post-head{
-  
-  display: flex;
-  align-items: center;
-  height: 80px;
-  background-color: #8A97BF;
-}
-.post-logo{
-  margin-left: 10px;
-  width: 50px;
-}
-.post-body{
-display: flex;
-justify-content: center;
-}
-.post-footer{
-  background-color: #afaeae;
-  max-height: fit-content;
-  min-height: 50px;
-  border-radius:  0 0 10px 10px;
-
-}
-.post-img{
-  width: 100%;
-}
-.post-footer p{
-  padding: 5px;
-}
-@media (max-width: 992px) { 
-  .feed{
-    width: 100%;
-  }
-  .post{
-    width: 100%;
-  }
-}
+  }}

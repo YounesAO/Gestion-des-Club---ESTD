@@ -22,7 +22,6 @@ session_start();
 </head>
 <body>
  
-<?php echo'<span class="user"><i class="fa fa-user" aria-hidden="true"></i> <span> '.$_SESSION['user']['nomEtudiant'] .' '.$_SESSION['user']['prenomEtudiant'].'</span></span>';?>
        
     <nav>
     <ul class="nav nav-tabs">
@@ -50,8 +49,18 @@ session_start();
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane container active" id="home">
-    <h1>Welcome</h1>
-    <div class="first">
+  <div class="clubs-scroll">
+    <div class="scroll-item">
+    <img src="images/logo.png" alt="">
+    </div>
+    <div class="scroll-item">
+    <img src="images/logo.png" alt="">
+    </div>
+    <div class="scroll-item">
+    <img src="images/logo.png" alt="">
+    </div>
+  </div>
+  <div class="first">
     <div class="feed">
       <div class="post">
         <div class="post-head">
@@ -86,7 +95,7 @@ session_start();
   <div class="tab-pane container fade" id="clubs">
       <h1>My Clubs</h1>
       <div class="C=container d-flex">
-      <div class="card" style="width:200px">
+      <div class="card" style="width:250px">
         <img class="card-img-top" src="images\logo1.png" alt="Card image">
           <div class="card-body">
             <h4 class="card-title">Club 2</h4>
@@ -97,7 +106,7 @@ session_start();
           </div>
         </div>
 
-        <div class="card" style="width:200px">
+        <div class="card" style="width:250px">
         <img class="card-img-top" src="images\logo1.png" alt="Card image">
           <div class="card-body">
             <h4 class="card-title">Club 1</h4>
@@ -114,7 +123,7 @@ session_start();
   <div class="tab-pane container fade" id="create">
       <h1>Créer un club</h1>
       <p>la durée de la creation des nouveaux clubs,sera expiré  le <span class='deadline'>23/10</span></p>
-      <a class='btn btn-warning p-2 shadow ' href="createClube.php">Start la procedure</a>
+      <a class='btn btn-warning p-2 shadow ' href="createClube.php">Start la procédure</a>
     
   </div>
 
