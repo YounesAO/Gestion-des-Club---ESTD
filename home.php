@@ -49,7 +49,7 @@ session_start();
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane container active" id="home">
-  <div class="clubs-scroll">
+  <div class="clubs-scroll shadow">
     <div class="scroll-item">
     <img src="images/logo.png" alt="">
     </div>
