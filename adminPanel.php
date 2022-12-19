@@ -32,7 +32,7 @@ session_start();
         <li class="nav-item"><a class='logout nav-link' S href="logout.php"><i class="fas fa-door-open    "></i></a></li>
 
     </ul>
-    </nav>
+</nav>
 
 <!-- Tab panes -->
 <div class="tab-content">
