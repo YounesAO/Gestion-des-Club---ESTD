@@ -66,7 +66,10 @@ session_start();
             <header>nouveau clube</header>
             <form action="" method="POST" target="votar">
                 <input type="text" name="nomclube" placeholder="nom de clube">
-                <input type="file" name="logoDeClube">
+                <div class="logoDeClube">
+                    <input type="file" name="logoDeClube">
+                    <label>logo de clube</label>
+                </div>
                 <textarea name="description_de_clube" cols="30" rows="2" placeholder="description de clube"></textarea>
                 <textarea name="objectifs_de_clube" cols="30" rows="2" placeholder="objectifs de clube"></textarea>
                 <textarea name="les_membres_de_bureau" cols="30" rows="2" 

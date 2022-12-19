@@ -31,6 +31,21 @@
     width: 90%;
     display: block;
 }
+.formStyle .logoDeClube {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.formStyle label {
+    position: absolute;
+    left: 20px;
+    top: -3px;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    background: white;
+    font-size: 13px;
+    color: #ad9898;
+}
 .formStyle .submitYourField {
     display: flex;
     justify-content: end;
