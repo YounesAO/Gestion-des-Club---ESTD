@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : dim. 11 déc. 2022 à 21:22
+-- Généré le : lun. 19 déc. 2022 à 10:03
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -119,6 +119,7 @@ DROP TABLE IF EXISTS `integrer`;
 CREATE TABLE IF NOT EXISTS `integrer` (
   `idClub` int(11) DEFAULT NULL,
   `IdEtudiant` int(11) DEFAULT NULL,
+  `valide` tinyint(1) DEFAULT '0',
   KEY `fkClubIntegrer` (`idClub`),
   KEY `fkEtudiantIntegrer` (`IdEtudiant`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -133,6 +134,7 @@ DROP TABLE IF EXISTS `organiser`;
 CREATE TABLE IF NOT EXISTS `organiser` (
   `idEvenement` int(11) DEFAULT NULL,
   `idClub` int(11) DEFAULT NULL,
+  `valide` tinyint(1) NOT NULL DEFAULT '0',
   KEY `fkEvenementOrganiser` (`idEvenement`),
   KEY `fkClubOrganiser` (`idClub`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
