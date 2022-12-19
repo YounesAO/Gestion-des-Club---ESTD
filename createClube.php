@@ -43,7 +43,7 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="home.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Clubs</a>
@@ -52,7 +52,7 @@ session_start();
                             <a class="nav-link" href="loginPage.php">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                     </ul>
                 </div>

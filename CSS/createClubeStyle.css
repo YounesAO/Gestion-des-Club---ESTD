@@ -32,9 +32,12 @@
     display: block;
 }
 .formStyle .logoDeClube {
+    width: 90%;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px auto;
+}
+.formStyle .logoDeClube input {
+    width: 100%;
 }
 .formStyle label {
     position: absolute;
