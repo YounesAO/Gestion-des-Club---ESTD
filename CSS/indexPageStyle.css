@@ -48,7 +48,8 @@ nav .container .navbar-nav .nav-item:hover:before {
     nav .container .navbar-nav .nav-item::before {
         height: 100%;
         top: 0;
-        background-color: rgb(26 58 117 / 15%);;
+        background-color: rgb(26 58 117 / 15%);
+        z-index: -2;
     }
 }
 .navbar-toggler:focus {

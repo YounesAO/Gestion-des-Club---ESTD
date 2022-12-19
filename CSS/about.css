@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+.mot_de_directeur,.presentation_d_ecole {
+    background-color: #021a64;
+}
+.mot_de_directeur .container,.presentation_d_ecole .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: capitalize;
+}
+.mot_de_directeur h3,.presentation_d_ecole h3 {
+    font-size: calc(1rem + 5vw);
+    font-weight: bold;
+    padding: calc(3rem + 5vw) 0;
+}
+article .container {
+    padding: 50px 0;
+    text-align: justify;
+}
+article p {
+    margin-bottom: 2.2rem !important;
+}
+@media (max-width:576px) {
+    p {
+        padding: 0 10px;
+    }
+}
