@@ -201,10 +201,10 @@ footer .lesCoordonnees {
     background-size: cover;
 }
 .theFirstPart0fFooter {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
-    padding: 50px 0;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
 }
 .theFirstPart0fFooter .title {
     font-size: 24px;
@@ -248,14 +248,20 @@ footer .lesCoordonnees {
     text-align: center;
     padding: 20px 0;
 }
+@media (max-width : 500px) {
+    .theFirstPart0fFooter {
+        flex-wrap: wrap;
+    }
+}
 @media (max-width : 345px) {
     .theFirstPart0fFooter .gallery .container-of-images {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        justify-content: center;
     }
     .theFirstPart0fFooter .gallery .container-of-images img {
-        max-width: calc(95vw - (var(--bs-gutter-x)));
+        max-width: calc(90vw - (var(--bs-gutter-x)));
     }
     .titles::before {
         left: -30px;

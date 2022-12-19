@@ -24,10 +24,12 @@ require 'dbConnect.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign up</title>
+    <!-- style -->
     <link rel="stylesheet" href="CSS/indexPageStyle.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="CSS/signUpStyle.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/createClubeStyle.css?v=<?php echo time(); ?>">
+    <!-- font family -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&amp;family=Open+Sans:wght@400;500;700&amp;family=Roboto:wght@300&amp;family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500&amp;display=swap"
@@ -41,8 +43,8 @@ require 'dbConnect.php';
 </head>
 
 <body>
+    <!-- start navbar -->
     <header>
-        <!-- start navbar -->
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container">
                 <span class="navbar-brand" href="#">
@@ -70,10 +72,10 @@ require 'dbConnect.php';
                 </div>
             </div>
         </nav>
-        <!-- end navbar -->
     </header>
+    <!-- end navbar -->
     <div class="container_of_container">
-    <div class="formStyle container">
+        <div class="formStyle container">
             <header>entrez votre informationes</header>
             <form action="signUpSendInformations.php" method="post" class="formUser" target="votar">
                     <input type="text" name="nom" placeholder="le nom">
@@ -86,12 +88,13 @@ require 'dbConnect.php';
                     <input type="password" name="motDePasse" placeholder="mot de passe">
                     <input type="file" name="img_of_user" placeholder="votre image">
                     <div class="submitYourField">
-                    <input type="submit" value="next" name="Submit" class="submit">
+                        <input type="submit" value="next" name="Submit" class="submit">
                     </div>
             </form>
             </div>
                 <iframe name="votar" style="display:none;"></iframe>
             </div>
+    </div>
     <!-- start footer -->
     <footer>
         <div class="lesCoordonnees">
@@ -137,7 +140,8 @@ require 'dbConnect.php';
 </body>
 <script>
 document.querySelector(`input[name='date_naissance']`).onblur = function() {
-    document.querySelector(`input[name='date_naissance']`).setAttribute('type', 'text')
+    this.setAttribute('type', 'text')
+    console.log(this)
 }
 </script>
 
