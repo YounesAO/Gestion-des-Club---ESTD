@@ -45,7 +45,7 @@ require 'dbConnect.php';
 <body>
     <!-- start navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg p-0">
+        <nav class="navbar shadow-lg navbar-expand-lg p-0">
             <div class="container">
                 <span class="navbar-brand" href="#">
                     <img src="images/logo1.png" alt="" srcset="" style="max-width:80px">
@@ -76,7 +76,7 @@ require 'dbConnect.php';
     <!-- end navbar -->
     <div class="container_of_container">
         <div class="formStyle container">
-            <header>entrez votre informationes</header>
+            <header>Entrez votre informations</header>
             <form action="signUpSendInformations.php" method="post" class="formUser" target="votar">
                     <input type="text" name="nom" placeholder="le nom">
                     <input type="text" name="prenom" placeholder="le prénom">
