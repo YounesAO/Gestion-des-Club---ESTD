@@ -11,7 +11,7 @@ session_start();
         
         $sql1 = 'INSERT INTO proposer(idEtudiant,idEvenement,idClub) values ("'.$idE.'","'.$idEvent.'","'.$idClub.'")';
         if(mysqli_query($con, $sql1)){
-         header('location: home.php"');
+         header('location: home.php');
 
          
         }
