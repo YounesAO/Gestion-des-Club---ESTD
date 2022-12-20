@@ -5,7 +5,7 @@ export function showClubes(objJson) {
         let img = document.createElement("img");
         let div = document.createElement("div");
         div.classList.add("p-3")
-        img.setAttribute("src",`http://localhost/gl_projet/Gestion-des-Club---ESTD/uploads/${objJson[i].logo}`);
+        img.setAttribute("src",`uploads/${objJson[i].logo}`);
         clube.appendChild(img);
         let h3 = document.createElement("h3");
         h3.textContent = objJson[i].nomClub;
