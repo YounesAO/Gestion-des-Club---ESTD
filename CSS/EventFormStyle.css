@@ -1,0 +1,95 @@
+:root {
+    --main-color : #1a3a76;
+    --second-color : rgb(236, 236, 236);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo",sans-serif;
+}
+.formStyle label {
+    position: initial!important;
+    color: #1a3a76!important;
+    font-weight: 400!important;
+    margin-left: 30px;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ajouterClube {
+    margin-top: 40px;
+    width: 800px;
+}
+
+.formStyle {
+    background: white;
+    border-top: 5px #1a3a76 solid;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+.formStyle header {
+    padding-top: 10px;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+.formStyle input[type="text"],.formStyle input[type="file"],.formStyle input[type="date"],.formStyle input[type="password"],.formStyle textarea {
+    outline: none;
+    border: 2px #ddd solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px auto;
+    width: 90%;
+    display: block;
+}
+.formStyle .logoDeClube {
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+.formStyle .logoDeClube input {
+    width: 100%;
+}
+.formStyle label {
+    position: absolute;
+    left: 20px;
+    top: -3px;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    background: white;
+    font-size: 13px;
+    color: #ad9898;
+}
+.formStyle .submitYourField {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    background-color: #ececec;
+}
+.formStyle .submit {
+    background: #1a3a76;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 15px;
+    cursor: pointer;
+}
+@media (max-width:720px) {
+    .formStyle {
+        width: calc(100vw - 40px);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
