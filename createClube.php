@@ -64,12 +64,13 @@ session_start();
     <div class="container_of_container">
         <div class="ajouterClube formStyle container">
             <header>nouveau clube</header>
-            <form action="" method="POST" target="votar">
+            <form action="createClubeSendInformationes.php" method="POST" target="votar" enctype="multipart/form-data">
                 <input type="text" name="nomclube" placeholder="nom de clube">
                 <div class="logoDeClube">
                     <input type="file" name="logoDeClube">
                     <label>logo de clube</label>
                 </div>
+                <input type="text" name="Slogan" placeholder="Slogan">
                 <textarea name="description_de_clube" cols="30" rows="2" placeholder="description de clube"></textarea>
                 <textarea name="objectifs_de_clube" cols="30" rows="2" placeholder="objectifs de clube"></textarea>
                 <textarea name="les_membres_de_bureau" cols="30" rows="2" 

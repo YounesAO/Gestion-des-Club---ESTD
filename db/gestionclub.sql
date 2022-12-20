@@ -29,12 +29,13 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `club`;
 CREATE TABLE IF NOT EXISTS `club` (
-  `idClub` int(11) NOT NULL,
+  `idClub` int(11) NOT NULL AUTO_INCREMENT,
   `nomClub` varchar(50) DEFAULT NULL,
   `Slogan` varchar(50) DEFAULT NULL,
   `logo` varchar(50) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
   `dateCreation` date DEFAULT NULL,
+  `lesObjectifs` text not NULL,
   PRIMARY KEY (`idClub`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
