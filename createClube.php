@@ -42,11 +42,11 @@ session_start();
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                    <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="home.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Clubs</a>
+                            <a class="nav-link" href="lesClubes.php">Clubs</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="loginPage.php">Login</a>
