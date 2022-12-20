@@ -92,7 +92,10 @@ require 'functions.php';
   </div>
 
   <div class="tab-pane container fade" id="clubs">
+      <div class="d-flex align-self-center ">
       <h1>My Clubs</h1>
+      <a class="btn m-3 align-self-center mr-auto btn-success" >Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
+      </div>
       <div class="container d-flex flex-wrap">
       <div class="card" style="width:250px">
         <img class="card-img-top" src="images\logo1.png" alt="Card image">
@@ -104,30 +107,18 @@ require 'functions.php';
             </div>
           </div>
         </div>
-        <div class="card" style="width:250px">
-        <img class="card-img-top" src="images\logo1.png" alt="Card image">
-          <div class="card-body">
-            <h4 class="card-title">Club 2</h4>
-            <p class="card-text">Some example text.</p>
-            <div>
-              <a href="EventForm.php?idClub=1" class="btn btn-primary" >propose event</a>
-            </div>
-          </div>
-        </div>
         
         <?php myClubs($_SESSION['user']['idEtudiant']) ?>
-        <div class="card" style="width:250px">
-        <img class="card-img-top" src="images\logo1.png" alt="Card image">
-          <div class="card-body">
-            <h4 class="card-title">Club 1</h4>
-            <p class="card-text">Some example text.</p>
-            <div>
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddEvent">propose event</a>
-            </div>
-          </div>
+        
+        
+        
+           
+          
           
         </div>
-      </div>
+        
+
+
   </div>
 
   <div class="tab-pane container fade" id="create">
@@ -142,7 +133,8 @@ require 'functions.php';
       
     
   </div>
-
+  
+</div>
 <script>
     //modale bootstrap 
     var myModal = document.getElementById('AddEvent')
