@@ -1,5 +1,6 @@
 <?php
 require 'dbConnect.php';
+$idClub=$_GET['idClub'];
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ require 'dbConnect.php';
 <div class="container_of_container">
         <div class="ajouterClube formStyle container">
             <header>Proposez un evenement</header>
-            <form action="proposeEvent.php?idClub=1" method="POST" target="votar" enctype="multipart/form-data">
+            <form action="proposeEvent.php?idClub=<?php echo $idClub; ?>" method="POST" target="votar" enctype="multipart/form-data">
            
                 <label for="nomEvent">le nom de l'Event</label>
                 <input type="text" name="nomEvent" placeholder="">

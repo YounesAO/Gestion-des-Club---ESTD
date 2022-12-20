@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'functions.php';
 
 ?>
 <!DOCTYPE html>
@@ -50,9 +51,7 @@ session_start();
 <div class="tab-content">
   <div class="tab-pane container active" id="home">
   <div class="clubs-scroll shadow">
-    <div class="scroll-item">
-    <img src="images/logo.png" alt="">
-    </div>
+    
     <div class="scroll-item">
     <img src="images/logo.png" alt="">
     </div>
@@ -94,7 +93,7 @@ session_start();
 
   <div class="tab-pane container fade" id="clubs">
       <h1>My Clubs</h1>
-      <div class="C=container d-flex">
+      <div class="container d-flex">
       <div class="card" style="width:250px">
         <img class="card-img-top" src="images\logo1.png" alt="Card image">
           <div class="card-body">
@@ -105,7 +104,7 @@ session_start();
             </div>
           </div>
         </div>
-
+        <?php myClubs($_SESSION['user']['idEtudiant']) ?>
         <div class="card" style="width:250px">
         <img class="card-img-top" src="images\logo1.png" alt="Card image">
           <div class="card-body">
@@ -133,7 +132,7 @@ session_start();
     
   </div>
 
-
+<?php echo'<script> alert("'.$_GET['message'].'"</script>';?>
 <script>
     //modale bootstrap 
     var myModal = document.getElementById('AddEvent')
