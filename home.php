@@ -101,7 +101,7 @@ session_start();
             <h4 class="card-title">Club 2</h4>
             <p class="card-text">Some example text.</p>
             <div>
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddEvent">propose event</a>
+              <a href="EventForm.php?idClub=1" class="btn btn-primary" >propose event</a>
             </div>
           </div>
         </div>
