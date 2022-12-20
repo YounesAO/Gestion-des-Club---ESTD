@@ -63,7 +63,7 @@ require 'dbConnect.php';
     <div class="container_of_container">
         <div class="formStyle container">
             <header>Entrez votre informations</header>
-            <form action="signUpSendInformations.php" method="post" class="formUser" target="votar">
+            <form action="signUpSendInformations.php" method="post" class="formUser" target="votar" enctype="multipart/form-data">
                     <input type="text" name="nom" placeholder="le nom">
                     <input type="text" name="prenom" placeholder="le prénom">
                     <input type="text" name="cne" placeholder="le numéro de la carte nationale">
@@ -72,7 +72,10 @@ require 'dbConnect.php';
                     <input type="text" name="date_naissance" placeholder="date naissance" onfocus="(this.type='date')">
                     <input type="text" name="user_name" placeholder="user name">
                     <input type="password" name="motDePasse" placeholder="mot de passe">
-                    <input type="file" name="img_of_user" placeholder="votre image">
+                    <div class="logoDeClube">
+                        <input type="file" name="imgofuser">
+                        <label>votre image</label>
+                    </div>
                     <div class="submitYourField">
                         <input type="submit" value="next" name="Submit" class="submit">
                     </div>
