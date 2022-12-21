@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +53,7 @@ session_start();
 
   <div class="tab-pane container fade" id="requests">
     <h3>requests d'integration du votre club </h3>
+    <?php $role = $_SESSION['user']['role'];Requests($role);?>
     <div class="card" >
     <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
     <div class="card-body">

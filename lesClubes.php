@@ -1,6 +1,9 @@
 <?php
-//connection a la bade de données
+//Importer la connection à la base de données
 require 'dbConnect.php';
+    $query = "SELECT * FROM club";
+    $doquery = mysqli_query($con,$query);
+    $data = mysqli_fetch_all($doquery,MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +12,11 @@ require 'dbConnect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up</title>
-    <!-- style -->
+    <title>Accueil</title>
+    <!-- css -->
     <link rel="stylesheet" href="CSS/indexPageStyle.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="CSS/signUpStyle.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="CSS/lesClubesStyle.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="CSS/all.min.css">
-    <link rel="stylesheet" href="CSS/createClubeStyle.css?v=<?php echo time(); ?>">
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
@@ -26,12 +28,19 @@ require 'dbConnect.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
+    <!-- script -->
+    <script type="module">
+        import {showClubes} from "./script/lesClubesScript.js";
+        const data = <?php echo json_encode($data); ?>;
+        showClubes(data);
+    </script>
+    <script src="script/lesClubesScript.js" type="module" defer></script>
 </head>
 
 <body>
-    <!-- start navbar -->
     <header>
-        <nav class="navbar shadow-lg navbar-expand-lg p-0">
+        <!-- start navbar -->
+        <nav class="navbar navbar-expand-lg p-0">
             <div class="container">
                 <span class="navbar-brand" href="#">
                     <img src="images/logo1.png" alt="" srcset="" style="max-width:80px">
@@ -43,7 +52,7 @@ require 'dbConnect.php';
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="home.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Clubs</a>
@@ -52,85 +61,78 @@ require 'dbConnect.php';
                             <a class="nav-link" href="loginPage.php">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!-- end navbar -->
     </header>
-    <!-- end navbar -->
-    <div class="container_of_container">
-        <div class="formStyle container">
-            <header>Entrez votre informations</header>
-            <form action="signUpSendInformations.php" method="post" class="formUser" target="votar" enctype="multipart/form-data">
-                    <input type="text" name="nom" placeholder="le nom">
-                    <input type="text" name="prenom" placeholder="le prénom">
-                    <input type="text" name="cne" placeholder="le numéro de la carte nationale">
-                    <input type="text" name="filiere" placeholder="filière">
-                    <input type="text" name="niveau" placeholder="niveau">
-                    <input type="text" name="date_naissance" placeholder="date naissance" onfocus="(this.type='date')">
-                    <input type="text" name="user_name" placeholder="user name">
-                    <input type="password" name="motDePasse" placeholder="mot de passe">
-                    <div class="logoDeClube">
-                        <input type="file" name="imgofuser">
-                        <label>votre image</label>
+    <div class="les_clubes">
+        <div class="container">
+            <h3>les clubes</h3>
+        </div>
+    </div>
+    <div class="Actualités_and_Annonces">
+        <div class="container">
+            <div class="lesClubes lesAnnounces">
+                <div class="clube announce d-none">
+                    <img src="" alt="">
+                    <div class="p-3">
+                        <h3></h3>
+                        <p></p>
                     </div>
-                    <div class="submitYourField">
-                        <input type="submit" value="next" name="Submit" class="submit">
+                    <div class="footer_of_announce">
+                        <a href="">read more</a>
+                        <i class="fa fa-arrow-right fa-fw"></i>
                     </div>
-            </form>
+                </div>
             </div>
-                <iframe name="votar" style="display:none;"></iframe>
-            </div>
+        </div>
     </div>
     <!-- start footer -->
     <footer>
         <div class="lesCoordonnees">
             <div class="container theFirstPart0fFooter">
-            <div class="aPropos">
-                <div class="title">a propos</div>
-                <div>
+                <div class="aPropos">
+                    <div class="title">a propos</div>
                     <div>
-                    <i class="fas fa-map-marker-alt fa-fw"></i>
-                    <div>ecole supérieur de la technologie dakhla , oum bouir</div>
-                    </div>
-                    <div>
-                    <i class="fa fa-phone fa-fw"></i>
-                    <div class="phone">
-                        <span>+212-528-00-00-00</span>
-                    </div>
-                    </div>
-                    <div>
-                        <i class="fa fa-phone fa-fw"></i>
-                        <div class="phone">
-                            <span>+212-528-00-00-00</span>
+                        <div>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            <div>ecole supérieur de la technologie dakhla , oum bouir</div>
                         </div>
+                        <div>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <div class="phone">
+                                <span>+212-528-00-00-00</span>
+                            </div>
                         </div>
+                        <div>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <div class="phone">
+                                <span>+212-528-00-00-00</span>
+                            </div>
                         </div>
-            </div>
-            <div class="gallery">
-                <div class="title">gallery</div>
-                <div class="container-of-images">
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="title">gallery</div>
+                    <div class="container-of-images">
                         <img src="images/event1.jpg" alt="" srcset="">
                         <img src="images/event2.jpg" alt="" srcset="">
                         <img src="images/event1.jpg" alt="" srcset="">
                         <img src="images/event2.jpg" alt="" srcset="">
                         <img src="images/event1.jpg" alt="" srcset="">
                         <img src="images/event2.jpg" alt="" srcset="">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="theSecondPartOfFooter">
-                <p>© 2021,EST Dakhla. Tous les droits sont réservés.</p>
+            <p>© 2021,EST Dakhla. Tous les droits sont réservés.</p>
         </div>
     </footer>
     <!-- end footer -->
-</body>
-<script>
-document.querySelector(`input[name='date_naissance']`).onblur = function() {
-    this.setAttribute('type', 'text')
-}
-</script>
 
 </html>

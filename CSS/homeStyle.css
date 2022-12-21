@@ -1,6 +1,10 @@
 body{
   background-color: #a7bdea;
 }
+.card:hover{
+  transform: scale(1.05);
+  transition: 500ms;
+}
 nav {
     position: fixed;
     left: 0;
@@ -11,9 +15,6 @@ nav {
     background-color: #8A97BF;
     text-align: center;}
 
-  .user span{
-    
-  }
   
  .user:hover{
  color: #727d9c;
@@ -33,8 +34,14 @@ nav {
     color: white;
     padding: 10px;
   }
+  .card-body{
+    text-align: center;
+  }
+  
   @media (max-width: 992px) {
-    
+   .p.card-text {
+    font-size: 12px!important;
+   }
     nav{
       position: absolute;
       left: 0;
@@ -288,7 +295,8 @@ nav {
     border: none;
     border-right: 5px rgb(52, 170, 199) solid;
     z-index: 1;
-    background-color:#727d9c;
+    background-color:#05288b;
+    color: white;
   }
   .tab-content{
     margin-left: 80px;

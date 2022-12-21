@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'functions.php';
 
 ?>
 <!DOCTYPE html>
@@ -26,8 +27,6 @@ session_start();
     <nav>
     <ul class="nav nav-tabs">
         <li class ="nav-item">
-        <img src="images/logo.png" alt="" srcset="">
-
         <a class="nav-link" data-bs-toggle="tab"   href="#home"> <i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a>
       </li>
         <li class ="nav-item">
@@ -50,9 +49,7 @@ session_start();
 <div class="tab-content">
   <div class="tab-pane container active" id="home">
   <div class="clubs-scroll shadow">
-    <div class="scroll-item">
-    <img src="images/logo.png" alt="">
-    </div>
+    
     <div class="scroll-item">
     <img src="images/logo.png" alt="">
     </div>
@@ -93,8 +90,11 @@ session_start();
   </div>
 
   <div class="tab-pane container fade" id="clubs">
+      <div class="d-flex align-self-center ">
       <h1>My Clubs</h1>
-      <div class="C=container d-flex">
+      <a class="btn m-3 align-self-center mr-2 btn-success" href="clubProfil.php" >Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
+      </div>
+      <div class="container d-flex flex-wrap">
       <div class="card" style="width:250px">
         <img class="card-img-top" src="images\logo1.png" alt="Card image">
           <div class="card-body">
@@ -105,19 +105,18 @@ session_start();
             </div>
           </div>
         </div>
-
-        <div class="card" style="width:250px">
-        <img class="card-img-top" src="images\logo1.png" alt="Card image">
-          <div class="card-body">
-            <h4 class="card-title">Club 1</h4>
-            <p class="card-text">Some example text.</p>
-            <div>
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddEvent">propose event</a>
-            </div>
-          </div>
+        
+        <?php myClubs($_SESSION['user']['idEtudiant']) ?>
+        
+        
+        
+           
+          
           
         </div>
-      </div>
+        
+
+
   </div>
 
   <div class="tab-pane container fade" id="create">
@@ -132,8 +131,8 @@ session_start();
       
     
   </div>
-
-
+  
+</div>
 <script>
     //modale bootstrap 
     var myModal = document.getElementById('AddEvent')
