@@ -27,8 +27,6 @@ require 'functions.php';
     <nav>
     <ul class="nav nav-tabs">
         <li class ="nav-item">
-        <img src="images/logo.png" alt="" srcset="">
-
         <a class="nav-link" data-bs-toggle="tab"   href="#home"> <i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a>
       </li>
         <li class ="nav-item">

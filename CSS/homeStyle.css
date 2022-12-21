@@ -295,7 +295,8 @@ nav {
     border: none;
     border-right: 5px rgb(52, 170, 199) solid;
     z-index: 1;
-    background-color:#727d9c;
+    background-color:#05288b;
+    color: white;
   }
   .tab-content{
     margin-left: 80px;
