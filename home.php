@@ -94,7 +94,7 @@ require 'functions.php';
   <div class="tab-pane container fade" id="clubs">
       <div class="d-flex align-self-center ">
       <h1>My Clubs</h1>
-      <a class="btn m-3 align-self-center mr-auto btn-success" >Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
+      <a class="btn m-3 align-self-center mr-2 btn-success" href="clubProfil.php" >Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
       </div>
       <div class="container d-flex flex-wrap">
       <div class="card" style="width:250px">
