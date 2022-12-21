@@ -25,7 +25,7 @@ require 'dbConnect.php';
                 <input type="text" name="userName" id="userName"><br>
                 <Label for ="password">Mot de passe      : </Label><br>
                 <input type="password" name="password" id="password"><br>
-                <a href="signUpPage.php">Inscrire</a><br>
+                <a href="signUp.php"  class="ab" >Inscrire</a><br>
                 <button class="button" value ='submit'>Valide</button>
             </div>
         </form>
