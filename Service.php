@@ -17,11 +17,13 @@ require 'dbConnect.php';
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet">
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\solid.css" rel="stylesheet">
-
-    <!-- update existing v5 CSS to use v6 icons and assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">    <!-- update existing v5 CSS to use v6 icons and assets -->
+    
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\v5-font-face.css" rel="stylesheet">
-</head>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap'); </style>
+  </head>
 <body>
+
 <nav>
     <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -37,16 +39,20 @@ require 'dbConnect.php';
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane container home active" id="Dashboard">
-    <span id="club"> HIGH TECH</span>
+    <div class="tab-pane container m-4 home active" id="Dashboard">
    <div class="d-flex widgets ">
         <div class="stat-widget shadow" >
-          <span class="stat-num">9  <i class="fa fa-user" aria-hidden="true"></i></span>
-          <span class="stat-text">Club</span>
+          <span class="stat-num">9  </span>
+          <span class="stat-text">  Club</span>
         </div>
-        <div class="nbMember shadow nextEvent" >
-          <p class ="nextEventText"><i class="fa fa-calendar" aria-hidden="true"></i> next event </p>
-          <span>20-09-2023  </i></span>
+        <div class="stat-widget shadow" >
+          <span class="stat-num"> 120 </span>
+          <span class="stat-text"><i class="fa fa-user" aria-hidden="true"></i>Etudiants</span>
+        </div>
+        <div class="stat-widget shadow" >
+        <span class ="stat-num date">20-09-2023  </i></span>
+        <span class="stat-text"><i class="fa fa-calendar" aria-hidden="true"></i> next event </span>
+          
         </div>
    </div>
     </div>

@@ -2,11 +2,13 @@ nav {
     position: fixed;
     left: 0;
     top: 0;
-    width: 80px;
+    width: 100px;
     height: 100%;
-    background-color: #8A97BF;
+    background-color: #4867c2;
     text-align: center;}
-
+body{
+  background-color: #2b6ef5;
+}
   .user span{
     
   }
@@ -126,6 +128,10 @@ nav {
   z-index: 1;
   background-color:#727d9c;
 }
+.stat-widget{
+  margin: 10px 30px 10px 0px;
+
+}
 
 }
 .deadline{
@@ -191,15 +197,40 @@ nav {
   }
  
   .widgets{
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .stat-widget{
+    DISPLAY: flex;
+    FLEX-DIRECTION: row;
+    ALIGN-ITEMS: flex-start;
+    JUSTIFY-CONTENT: center;
+    width: 300px;
+    min-height: 165px;
+  }
+  .date{
+    position: absolute;
+    margin-top: 10px;
+    font-size: 50px!important;
+
+  }
+  .stat-num{
+   
+  font-family: 'Homenaje';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 105px;
+  text-align: center;}
   .stat-num:hover{
   
   transition: 300ms;
     transform:scale(1.1);
   }
   .stat-text{
-    font-size: small;
+    font-family: 'Homenaje';
+    font-size: large;
   }
   .nextEvent {
     color: white;
@@ -209,6 +240,10 @@ nav {
     font-size: x-small;
   }
   @media (min-width: 992px) {
+    .stat-widget{
+      margin: 0px 30px 10px 0px;
+    
+    }
     .logout{
       margin-top: 33%;
       color :red!important;
@@ -220,15 +255,15 @@ nav {
   }
   .nav-tabs 
  {
-    width: 80px;
+    width: 100px;
     border: none;
   }
   .nav-item{
 
-    width: 80PX;
+    width: 100PX;
   }
   .nav-link{
-    width: 80PX;
+    width: 100PX;
   }
   .nav-tabs .nav-link :hover {
     transition: 1s;
@@ -251,5 +286,5 @@ nav {
     background-color:#727d9c;
   }
   .tab-content{
-    margin-left: 80px;
+    margin-left: 100px;
   }}
