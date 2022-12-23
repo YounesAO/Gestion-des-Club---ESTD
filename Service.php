@@ -39,7 +39,7 @@ require 'dbConnect.php';
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane container m-4 home active" id="Dashboard">
+    <div class="tab-pane container first m-4 home active" id="Dashboard">
    <div class="d-flex widgets ">
         <div class="stat-widget shadow" >
           <span class="stat-num">9  </span>
@@ -50,9 +50,14 @@ require 'dbConnect.php';
           <span class="stat-text"><i class="fa fa-user" aria-hidden="true"></i>Etudiants</span>
         </div>
         <div class="stat-widget shadow" >
-        <span class ="stat-num date">20-09-2023  </i></span>
-        <span class="stat-text"><i class="fa fa-calendar" aria-hidden="true"></i> next event </span>
-          
+          <span class ="stat-num date">20-09-2023  </i></span>
+          <span class="stat-text"><i class="fa fa-calendar" aria-hidden="true"></i> next event </span>
+        </div>
+        <div class="stat-widget shadow" id="chartClub" >
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="stat-widget shadow" id="chartmem" >
+          <canvas id="myChart1"></canvas>
         </div>
    </div>
     </div>
@@ -87,6 +92,54 @@ require 'dbConnect.php';
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+ const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['HIGH TECH', 'ESTD MEDIA', 'GEN Z','United student'],
+    datasets: [{
+      label: 'Membres par clubs',
+      data: [12, 19, 3, 5],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+  const ctx1 = document.getElementById('myChart1');
+
+  data1 = {
+    datasets: [{
+        data: [10, 30]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Female',
+        'Male'
+    ]
+};
+ 
+  
+const config1 = {
+  type: 'doughnut',
+  data: data1,
+};
+new Chart(ctx1, config1);
+
+
+</script>
 
 </body><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
