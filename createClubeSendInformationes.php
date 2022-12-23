@@ -18,6 +18,7 @@ if ($con) {
             `dateCreation`, `lesObjectifs`,`logo`,`Slogan`) 
             VALUES ('$nomclube','$description_de_clube','$dateCreation','$objectifs_de_clube','$logoNewName','$Slogan')";
         mysqli_query($con,$query);
+        
     }
     // [$nomDeFichier,$type] = explode(".",$_FILES['fileUpload']['name']);
     //         $taille = $_FILES['fileUpload']['size'];
