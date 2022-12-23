@@ -5,7 +5,7 @@ function myClubs($para) {
   
 require 'dbConnect.php';
 
-$sqlR = " select nomClub,i.idClub, Slogan from club c ,integrer i  where (i.IdEtudiant = $para)and (valide = 1)and (i.idClub = C.idClub);";
+$sqlR = " select nomClub,i.idClub, Slogan from club c ,integrer i  where (i.IdEtudiant = $para)and (valide = 1) and (i.idClub = C.idClub);";
 $result = mysqli_query($con, $sqlR);
 
 // Check if the SELECT query was successful

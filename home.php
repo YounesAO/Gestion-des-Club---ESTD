@@ -49,23 +49,20 @@ require 'functions.php';
 <div class="tab-content">
   <div class="tab-pane container active" id="home">
   <div class="clubs-scroll shadow">
+   <h3 class=¨p-2¨>
+    <?php echo $_SESSION['user']['nomEtudiant'].' '.$_SESSION['user']['prenomEtudiant']?>
+   </h3>
     
-    <div class="scroll-item">
-    <img src="images/logo.png" alt="">
-    </div>
-    <div class="scroll-item">
-    <img src="images/logo.png" alt="">
-    </div>
   </div>
   <div class="first">
     <div class="feed">
       <div class="post">
         <div class="post-head">
-          <img class='post-logo' src="images/logo.png" alt="logo">
+          <img class='post-logo' src="images/logomedia.jpeg" alt="logo">
           <span class="post-club">ESTD MEDIA</span>
         </div>
         <div class="post-body">
-          <img class ="post-img" src="images/event2.jpg" alt="postImg">
+          <img class ="post-img" src="images/post1.jpeg" alt="postImg">
         </div>
         <div class="post-footer">
 
@@ -73,15 +70,26 @@ require 'functions.php';
       </div>
       <div class="post">
         <div class="post-head">
-          <img class='post-logo' src="images/logo.png" alt="logo">
+          <img class='post-logo' src="images/logomedia.jpeg" alt="logo">
           <span class="post-club">HIGH TECH</span>
           
         </div>
         <div class="post-body">
-          <img class ="post-img" src="images/event1.jpg" alt="postImg">
+          <img class ="post-img" src="images/post2.jpeg" alt="postImg">
         </div>
         <div class="post-footer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur cumque omnis a alias quaerat. Illum explicabo sint aperiam esse, inventore magni, aspernatur maiores iure neque minima rem dolor. Nisi?</p>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-head">
+          <img class='post-logo' src="images/logomedia.jpeg" alt="logo">
+          <span class="post-club">HIGH TECH</span>
+          
+        </div>
+        <div class="post-body">
+          <img class ="post-img" src="images/post3.jpeg" alt="postImg">
+        </div>
+        <div class="post-footer">
         </div>
       </div>
     </div>
