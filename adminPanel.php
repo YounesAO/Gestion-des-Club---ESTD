@@ -11,6 +11,8 @@ require 'functions.php';
     <title>Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/adminPanelStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">    <!-- update existing v5 CSS to use v6 icons and assets -->
+
      <!-- Loading the v6 core styles and the Solid and Brands styles -->
      <link href="fontawsome\fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet">
@@ -38,21 +40,28 @@ require 'functions.php';
 <!-- Tab panes -->
 <div class="tab-content">
     <div class="tab-pane container home active" id="home">
-    <span id="club"> HIGH TECH</span>
+      <div class="container-fluid bg-pri p-2 m-1 d-flex justify-content-center ">
+    <span class=" " > HIGH TECH</span>
+    </div>
    <div class="d-flex widgets ">
-        <div class="nbMember shadow" >
-          <span>200  <i class="fa fa-user" aria-hidden="true"></i></span>
-          <p class="nextEventText">Membres</p>
+        <div class="nbMember shadow m-1" >
+          <span>200 </span><p> <i class="fa fa-user" aria-hidden="true"></i></p>
+          <p class="nextEventText ">Membres</p>
         </div>
-        <div class="nbMember shadow nextEvent" >
-          <p class ="nextEventText"><i class="fa fa-calendar" aria-hidden="true"></i> next event </p>
-          <span>20-09-2023  </i></span>
+        <div class="nbMember shadow m-1" >
+          <span>200  </span><p><i class="fa fa-user" aria-hidden="true"></i></p>
+          <p class="nextEventText">Requests</p>
+        </div>
+        <div class="nbMember shadow m-1 nextEvent" >
+          <p class ="nextEventText "><i class="fa fa-calendar" aria-hidden="true"></i> next event </p>
+          <span class="dat">20-09-2023  </i></span>
         </div>
    </div>
     </div>
 
   <div class="tab-pane container fade" id="requests">
     <h3>requests d'integration du votre club </h3>
+    <div class="requests">
     <?php $role = $_SESSION['user']['role'];Requests($role);?>
     <div class="card" >
     <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
@@ -65,6 +74,7 @@ require 'functions.php';
         </div>
     </div>
 </div>
+    </div>
   </div>
   <div class="tab-pane container fade" id="events">
   <h3>Evenement proposés par les membres </h3> <br>

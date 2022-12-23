@@ -16,6 +16,10 @@ require 'functions.php';
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet">
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\solid.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&amp;family=Open+Sans:wght@400;500;700&amp;family=Roboto:wght@300&amp;family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500&amp;display=swap"
+        rel="stylesheet">
 
     <!-- update existing v5 CSS to use v6 icons and assets -->
     <link href="fontawsome\fontawesome-free-6.2.1-web\css\v5-font-face.css" rel="stylesheet">
@@ -99,8 +103,8 @@ require 'functions.php';
 
   <div class="tab-pane container fade" id="clubs">
       <div class="d-flex align-self-center ">
-      <h1>My Clubs</h1>
-      <a class="btn m-3 align-self-center mr-2 btn-success" href="clubProfil.php" >Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
+      <h1 class ="container-fluid bg-light p-3 m-2">My Clubs</h1>
+      <a class="btn  p-3  align-self-center mr-2 btn-success" href="clubProfil.php" >Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
       </div>
       <div class="container d-flex flex-wrap">
       <div class="card" style="width:250px">
@@ -128,14 +132,14 @@ require 'functions.php';
   </div>
 
   <div class="tab-pane container fade" id="create">
-      <h1>Créer un club</h1>
-      <p>la durée de la creation des nouveaux clubs,sera expiré  le <span class='deadline'>23/10</span></p>
-      <a class='btn btn-warning p-2 shadow ' href="createClube.php">Start la procédure</a>
+      <h3 class ="container-fluid bg-light p-3 m-1" >Créer un club</h3>
+      <p class="m-1">la durée de la creation des nouveaux clubs,sera expiré  le <span class='deadline'>23/10</span></p>
+      <a class='m-1 btn btn-warning p-2 shadow ' href="createClube.php">Start la procédure</a>
     
   </div>
 
   <div class="tab-pane container fade" id="inbox">
-      <h1>Announces</h1>
+      <h3 class ="container-fluid bg-light p-3 m-2" >Announces</h3>
       
     
   </div>

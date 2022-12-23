@@ -41,28 +41,32 @@ color:rgba(252, 252, 252, 0.7);
 text-decoration:none;
 font-size : large;
 }
-.home #club{
-position: absolute;
-right: 0;
-font-weight:bold;
-padding:10px;
-margin-right : 10px;
-font-size: 18px;
-color: black;
-background-color:#ffffff;
 
+.requests{
+  display: flex;
+}
+.requests .card{
+  margin: 10px;
 }
 .home .nbMember{
-  width: 15rem;
   padding:30PX 50PX 30PX 50PX;
   border-radius: 5px;
   font-size: X-large;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: rgb(228, 208, 32);
+  width: 300px;
+  height: 150px;
+ 
 }
 .widgets{
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+    text-align: center;
+    font-family: 'Homenaje';
+    font-style: normal;  
 }
 .nbMember:hover{
 
@@ -70,8 +74,28 @@ transition: 300ms;
   transform:scale(1.1);
 }
 .nextEvent {
+  width: 300px;
+flex-direction: column-reverse;
+justify-content: center;
   color: white;
   background-color: rgb(167, 20, 167)!important;
+}
+.nbMember span{
+  font-family: 'Homenaje';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 105px;
+  text-align: center;
+  
+  
+}
+.nbMember{
+  display: flex;
+}
+.dat{
+  font-size: 46px!important;
+
 }
 .nextEventText{
   font-size: x-small;
@@ -114,6 +138,12 @@ color : white;
   padding: 3px;
   width: 100px;
   font-size: small;
+}
+.bg-pri{
+  color: aliceblue;
+  font-weight: 700 ;
+  background: rgb(65, 132, 177);
+  border-radius: 5px;
 }
 @media (max-width: 992px) {
   nav{
