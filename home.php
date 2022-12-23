@@ -11,15 +11,6 @@ require 'functions.php';
     $query = "SELECT nomClub,logo,description FROM club c,integrer i where c.idClub = i.idClub and IdEtudiant = ".$data[0]."";
     $doQuery = mysqli_query($con,$query);
     $clubes = mysqli_fetch_all($doQuery,MYSQLI_ASSOC);
-
-    // $queryTwo = "SELECT * FROM dossier";
-    // $doQueryTwo = mysqli_query($con,$queryTwo);
-    // $dataTwo = mysqli_fetch_all($doQueryTwo,MYSQLI_ASSOC);
-    // // end get folders's informationes
-    // // files 
-    // $queryTwo = "SELECT * FROM fichier";
-    // $doQueryTwo = mysqli_query($con,$queryTwo);
-    // $dataThree = mysqli_fetch_all($doQueryTwo,MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
