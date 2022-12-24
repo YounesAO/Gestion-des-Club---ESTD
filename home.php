@@ -2,6 +2,7 @@
 session_start();
 require 'dbConnect.php';
 require 'functions.php';
+require 'Anonces.php';
     if(!isset($_SESSION['user'])){
         header("location: loginPage.php");
     } else {
@@ -186,6 +187,12 @@ require 'functions.php';
             <!-- start inbox -->
             <div class="tab-pane container fade" id="inbox">
                 <h1>Announces</h1>
+                <div>
+                <?php
+                $Query = mysqli_query($con,"select c.idClub from club c,integrer i where c.idClub = i.idClub and i.IdEtudiant = ".$data[0].";");
+                while($row = mysqli_fetch_assoc($Query)){
+                annonces($row['idClub']); }?>
+                </div>
             </div>
             <!-- start inbox -->
         </div>

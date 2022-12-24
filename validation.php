@@ -8,8 +8,9 @@ echo($value.$idClub.$idsp);
 
 if($value){
 $sql = "UPDATE creer SET idSP = '1' WHERE idClub = '$idClub'";
-}
+}else{
 $sql = "DELETE FROM creer  WHERE idClub = '$idClub'";
+}
 $result = mysqli_query($con, $sql);
 
 if ($result) {

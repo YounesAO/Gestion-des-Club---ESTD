@@ -63,4 +63,28 @@ function Requests($ram) {
           echo "<span class='bg-light p-1 m-1 dark '>0 results<span>";
         }
     }
+    function events($param){
+      require 'dbConnect.php';
+      $sqlRe = " select * from evenement   where idEvenement in (select idEvenement from proposer where idClub =$param and valide = 0 );";
+      $result1 = mysqli_query($con, $sqlRe);
+      
+      // Check if the SELECT query was successful
+      if (mysqli_num_rows($result1) > 0) {
+        // Output the result of the SELECT query
+            while($row = mysqli_fetch_assoc($result1)) {
+
+                echo' <div class="card m-1" >
+                <img class="card-img-top" src="images\logo1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">'.$row['nomEvent'].'</h4>
+                    <p class="card-text">'.$row['descriptionEvent'].' Proposer par username</p>
+                    <div>
+                    <a href="okToEvent.php?value=true&idClub='.$param.'&eve='.$row['idEvenement'].' " class="btn btn-primary">Valider</a>
+                    <a href="okToEvent.php?value=false&idClub='.$param.'&eve='.$row['idEvenement'].' " class="btn btn-danger">Refuser</a>
+                    </div>
+                </div>
+              </div>';
+            }}
+      
+    }
 ?>

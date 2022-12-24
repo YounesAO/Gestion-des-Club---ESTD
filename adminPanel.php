@@ -1,6 +1,8 @@
 <?php
 session_start();
 require 'functions.php';
+$clubId = $_SESSION['user']['role'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +69,10 @@ require 'functions.php';
   </div>
   <div class="tab-pane container fade" id="events">
   <h3>Evenement proposés par les membres </h3> <br>
+  <div class=" d-flex flex-wrap events">
+    <?php events($clubId); ?>
 
+  </div>
   <div class="card" >
     <img class="card-img-top" src="images\logo1.png" alt="Card image">
     <div class="card-body">

@@ -1,7 +1,7 @@
 <?php
 //Importer la connection à la base de données
 require 'dbConnect.php';
-    $query = "SELECT * FROM club";
+    $query = "SELECT * FROM club where idClub  in (select idClub from creer where idSP is not null )";
     $doquery = mysqli_query($con,$query);
     $data = mysqli_fetch_all($doquery,MYSQLI_ASSOC);
 ?>

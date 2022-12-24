@@ -7,16 +7,16 @@ function myClubs() {
 
     require 'dbConnect.php';
     
-    $sqlR = " select * from club where idClub not in(select idClub from integrer where idEtudiant = $idE) ;";
+    $sqlR = " select * from club where idClub  in (select idClub from creer where idSP is not null ) and idClub not in(select idClub from integrer where idEtudiant = $idE) ;";
     $result = mysqli_query($con, $sqlR);
     
     // Check if the SELECT query was successful
     if (mysqli_num_rows($result) > 0) {
       // Output the result of the SELECT query
           while($row = mysqli_fetch_assoc($result)) {
-    
+            $logo = 'uploads\\'.$row['logo'];
             echo'<div class="card m-3" style="width:250px">
-            <img class="card-img-top" src="images\logo1.png" alt="Card image">
+            <img class="card-img-top" src="';echo $logo.'" alt="Card image">
               <div class="card-body">
                 <h4 class="card-title">'.$row['nomClub'].'</h4>
                 <p class="card-text">'.$row['Slogan'].'</p>
@@ -25,7 +25,6 @@ function myClubs() {
                 </div>
               </div>
             </div>
-                
             ';
           }
         } else {
