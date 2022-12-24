@@ -64,14 +64,37 @@ require 'dbConnect.php';
         <div class="formStyle container">
             <header>Entrez votre informations</header>
             <form action="signUpSendInformations.php" method="post" class="formUser" target="votar" enctype="multipart/form-data">
-                    <input type="text" name="nom" placeholder="le nom">
-                    <input type="text" name="prenom" placeholder="le prénom">
-                    <input type="text" name="cne" placeholder="le numéro de la carte nationale">
-                    <input type="text" name="filiere" placeholder="filière">
-                    <input type="text" name="niveau" placeholder="niveau">
-                    <input type="text" name="date_naissance" placeholder="date naissance" onfocus="(this.type='date')">
-                    <input type="text" name="user_name" placeholder="user name">
-                    <input type="password" name="motDePasse" placeholder="mot de passe">
+                    <input type="text" name="nom" placeholder="Nom">
+                    <input type="text" name="prenom" placeholder="Prénom">
+                    <input type="text" name="cne" placeholder="code national d'étudiant">
+                    <div class="logoDeClube">
+                    <label for="sexe">sexe</label>
+                    <select name="sexe" id="sexe">
+                        <option value="M">Masculin</option>
+                        <option value="F">Féminin</option>
+                        
+                    </select>
+                    </div>
+                    <div class="logoDeClube">
+                    <label for="filiere">Filière</label>
+                    <select name="filiere" id="filiere">
+                        <option value="GI">Genie informatique</option>
+                        <option value="GE">Genie électrique</option>
+                        <option value="TM">Technique de management</option>
+                        <option value="GPA">Genie des Procedes Alimentaire</option>
+                    </select>
+                    </div>
+                    <div class="logoDeClube">
+                    <label for="niveau">Niveau d'études</label>
+                    <select name="niveau" id="niveau">
+                        <option value="1">Premiere Année</option>
+                        <option value="2">Deuxième Année</option>
+                        
+                    </select>
+                    </div>
+                    <input type="text" name="date_naissance" placeholder="Date naissance" onfocus="(this.type='date')">
+                    <input type="text" name="user_name" placeholder="User Name">
+                    <input type="password" name="motDePasse" placeholder="Mot de passe">
                     <div class="logoDeClube">
                         <input type="file" name="imgofuser">
                         <label>votre image</label>
@@ -81,7 +104,7 @@ require 'dbConnect.php';
                     </div>
             </form>
             </div>
-                <iframe name="votar" style="display:none;"></iframe>
+                <iframe name="votar" ></iframe>
             </div>
     </div>
     <!-- start footer -->

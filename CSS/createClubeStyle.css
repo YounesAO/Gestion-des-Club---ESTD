@@ -22,7 +22,7 @@
     margin: 0 auto;
     width: 90%;
 }
-.formStyle input[type="text"],.formStyle input[type="file"],.formStyle input[type="date"],.formStyle input[type="password"],.formStyle textarea {
+.formStyle input[type="text"],.formStyle input[type="file"],.formStyle input[type="date"],.formStyle input[type="password"],.formStyle textarea , .formStyle select{
     outline: none;
     border: 2px #ddd solid;
     border-radius: 5px;
@@ -37,6 +37,9 @@
     margin: 20px auto;
 }
 .formStyle .logoDeClube input {
+    width: 100%;
+}
+.formStyle select {
     width: 100%;
 }
 .formStyle label {
