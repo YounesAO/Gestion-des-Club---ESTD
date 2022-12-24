@@ -63,18 +63,7 @@ require 'functions.php';
     <h3>requests d'integration du votre club </h3>
     <div class="requests">
     <?php $role = $_SESSION['user']['role'];Requests($role);?>
-    <div class="card" >
-    <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
-    <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text.</p>
-        <div>
-        <a href="#" class="btn btn-primary">Accepter</a>
-        <a href="#" class="btn btn-danger">Refuser</a>
-        </div>
-    </div>
-</div>
-    </div>
+   </div>
   </div>
   <div class="tab-pane container fade" id="events">
   <h3>Evenement proposés par les membres </h3> <br>

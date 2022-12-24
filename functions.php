@@ -38,7 +38,7 @@ function Requests($ram) {
   
     require 'dbConnect.php';
     
-    $sqlRe = " select e.idEtudiant,nomEtudiant,prenomEtudiant, filiere from etudiant e ,integrer i   where (i.idEtudiant = e.idEtudiant) and (i.idClub = '".$ram."');";
+    $sqlRe = " select e.idEtudiant,nomEtudiant,prenomEtudiant, filiere from etudiant e ,integrer i   where (i.idEtudiant = e.idEtudiant) and valide = 0 and i.idClub ='".$ram."';";
     $result1 = mysqli_query($con, $sqlRe);
     
     // Check if the SELECT query was successful
@@ -60,7 +60,7 @@ function Requests($ram) {
              ';
           }
         } else {
-          echo "<span>0 results<span>";
+          echo "<span class='bg-light p-1 m-1 dark '>0 results<span>";
         }
     }
 ?>

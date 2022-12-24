@@ -7,7 +7,7 @@ function myClubs() {
 
     require 'dbConnect.php';
     
-    $sqlR = " select nomClub,c.idClub, Slogan from club c ,integrer i where (i.idClub<>c.idClub)and (i.IdEtudiant=$idE);";
+    $sqlR = " select * from club where idClub not in(select idClub from integrer where idEtudiant = $idE) ;";
     $result = mysqli_query($con, $sqlR);
     
     // Check if the SELECT query was successful
