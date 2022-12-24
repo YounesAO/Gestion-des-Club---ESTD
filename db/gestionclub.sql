@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 19 déc. 2022 à 10:03
+-- Généré le : sam. 24 déc. 2022 à 20:27
 -- Version du serveur : 5.7.36
 -- Version de PHP : 8.0.13
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `club` (
   `logo` varchar(50) DEFAULT NULL,
   `description` varchar(50) DEFAULT NULL,
   `dateCreation` date DEFAULT NULL,
-  `lesObjectifs` text not NULL,
+  `lesObjectifs` varchar(100) NOT NULL,
   PRIMARY KEY (`idClub`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -64,24 +64,19 @@ CREATE TABLE IF NOT EXISTS `creer` (
 DROP TABLE IF EXISTS `etudiant`;
 CREATE TABLE IF NOT EXISTS `etudiant` (
   `idEtudiant` int(11) NOT NULL AUTO_INCREMENT,
-  `nomEtudiant` varchar(50) DEFAULT NULL,
+  `nomEtudiant` varchar(50) NOT NULL,
   `prenomEtudiant` varchar(50) DEFAULT NULL,
-  `CNE` varchar(50) DEFAULT NULL,
+  `CNE` varchar(50) NOT NULL,
   `filiere` varchar(50) DEFAULT NULL,
   `niveau` varchar(50) DEFAULT NULL,
   `dateNaissance` date DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `img` varchar(50) DEFAULT NULL,
+  `password` varchar(50) NOT NULL,
+  `img` varchar(50) NOT NULL DEFAULT 'images\\img_avatar1.png',
   `userName` varchar(40) NOT NULL,
+  `role` int(11) NOT NULL DEFAULT '0',
+  `sexe` varchar(1) NOT NULL,
   PRIMARY KEY (`idEtudiant`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `etudiant`
---
-
-INSERT INTO `etudiant` (`idEtudiant`, `nomEtudiant`, `prenomEtudiant`, `CNE`, `filiere`, `niveau`, `dateNaissance`, `password`, `img`, `userName`) VALUES
-(1, 'AIT OUAHDA', 'YOUNES', 'D1234', 'GI', '2', '2002-09-23', '12345678', NULL, 'YOUNESAIO');
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -100,15 +95,7 @@ CREATE TABLE IF NOT EXISTS `evenement` (
   `lieu` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idEvenement`),
   KEY `fkEtudiantEvenement` (`idEtudiant`)
-) ENGINE=MyISAM AUTO_INCREMENT=1670793201 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `evenement`
---
-
-INSERT INTO `evenement` (`idEvenement`, `idEtudiant`, `nomEvent`, `dateEvent`, `descriptionEvent`, `img`, `lieu`) VALUES
-(1670793200, 1, 'The Hand Bold', NULL, 'TEST', NULL, NULL),
-(1670793159, 1, 'The Hand Bold', NULL, 'TEST', NULL, NULL);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -118,10 +105,10 @@ INSERT INTO `evenement` (`idEvenement`, `idEtudiant`, `nomEvent`, `dateEvent`, `
 
 DROP TABLE IF EXISTS `integrer`;
 CREATE TABLE IF NOT EXISTS `integrer` (
-  `idClub` int(11) DEFAULT NULL,
-  `IdEtudiant` int(11) DEFAULT NULL,
+  `idClub` int(11) NOT NULL,
+  `IdEtudiant` int(11) NOT NULL,
   `valide` tinyint(1) DEFAULT '0',
-  KEY `fkClubIntegrer` (`idClub`),
+  PRIMARY KEY (`idClub`,`IdEtudiant`),
   KEY `fkEtudiantIntegrer` (`IdEtudiant`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -150,17 +137,11 @@ DROP TABLE IF EXISTS `proposer`;
 CREATE TABLE IF NOT EXISTS `proposer` (
   `idEtudiant` int(11) DEFAULT NULL,
   `idEvenement` int(11) DEFAULT NULL,
+  `idClub` int(11) DEFAULT NULL,
+  `valide` int(11) NOT NULL DEFAULT '0',
   KEY `fkEtudiantProposer` (`idEtudiant`),
   KEY `fkEvenementProposer` (`idEvenement`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `proposer`
---
-
-INSERT INTO `proposer` (`idEtudiant`, `idEvenement`) VALUES
-(1, 1670793159),
-(1, 1670793200);
 
 -- --------------------------------------------------------
 
