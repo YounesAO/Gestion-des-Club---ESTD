@@ -14,8 +14,12 @@ $sql = "DELETE FROM creer  WHERE idClub = '$idClub'";
 $result = mysqli_query($con, $sql);
 
 if ($result) {
-    $sql = "Update etudiant set role ='$idClub' where idEtudiant in (select idEtudiant from creer where idClub = '$idClub')";
+    $etudiant = mysqli_fetch_assoc(mysqli_query($con,"select idEtudiant from creer where idClub = '$idClub'"));
+    $idetudiant  =$etudiant['idEtudiant'];
+    $sql = "Update etudiant set role ='$idClub' where idEtudiant = $idetudiant";
     mysqli_query($con,$sql);
+    $sql1 = "INSERT INTO integrer(`idClub`, `IdEtudiant`, `valide`) VALUES ('".$idClub."', '".$idetudiant."',1)";
+    mysqli_query($con,$sql1);
 
     echo ' successfully';
 } else {

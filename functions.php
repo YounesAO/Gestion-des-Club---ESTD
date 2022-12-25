@@ -1,5 +1,12 @@
 <?php
+function nomClub($idcl){
+  require 'dbConnect.php';
 
+$sqlR = " select nomClub from club where idClub =$idcl;";
+$result = mysqli_query($con, $sqlR);
+$row = mysqli_fetch_assoc($result);
+echo $row['nomClub'];
+}
 function myClubs($para) {
     
   
