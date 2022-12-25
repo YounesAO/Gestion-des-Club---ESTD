@@ -103,9 +103,8 @@ require 'dbConnect.php';
                         <input type="submit" value="next" name="Submit" class="submit">
                     </div>
             </form>
-            </div class="d-none">
-                <iframe name="votar" ></iframe>
-            </div>
+            <iframe name="votar" class="d-none"></iframe>
+        </div>
     </div>
     <!-- start footer -->
     <footer>

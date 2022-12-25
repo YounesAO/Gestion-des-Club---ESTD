@@ -31,6 +31,7 @@ export function afficher_mes_clubes(clubes) {
         div.prepend(h3);
         div.append(p);
         let divEvent = document.querySelector(".event").cloneNode(true);
+        divEvent.textContent.replace('1',club.idClub);
         divEvent.classList.remove('d-none');
         div.append(divEvent);
         clubDiv.append(div);

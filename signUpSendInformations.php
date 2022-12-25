@@ -12,8 +12,6 @@ if ($con) {
     $password=$_POST['motDePasse'];
     $userName=$_POST['user_name'];
     $sexe=$_POST['sexe'];
-    // nauveau code
-    print_r($_FILES['imgofuser']);
     if($_FILES['imgofuser']['size']!=0){
     [$nomDImage,$type] = explode(".",$_FILES['imgofuser']['name']);
     $tmpname = $_FILES['imgofuser']['tmp_name'];
@@ -26,6 +24,7 @@ if ($con) {
         $query = "INSERT INTO `etudiant`(`nomEtudiant`, `prenomEtudiant`, `CNE`, `filiere`, `niveau`, `dateNaissance`, `password`, `userName`,`img`,`sexe`) 
             VALUES ('$nom','$prenom','$cne','$filiere','$niveau','$dateNaissance','$password','$userName','$imageNewName','$sexe')";
         mysqli_query($con,$query);
+        header("location: loginPage.php");
     }
 }
 

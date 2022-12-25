@@ -27,6 +27,6 @@ if (mysqli_query($con, $query)) {
 } else {
     echo "Error updating record: " . mysqli_error($con);
 }
-header("location: adminPanel.php");
 }
+header("location: adminPanel.php");
 ?>

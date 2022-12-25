@@ -24,4 +24,5 @@ if ($result) {
 } else {
     echo 'Error inserting record: ' . mysqli_error($con);
 }
+header("location: Service.php");
 ?>
