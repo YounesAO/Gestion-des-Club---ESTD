@@ -17,4 +17,6 @@ if ($result) {
     echo ' successfully';
 } else {
     echo 'Error inserting record: ' . mysqli_error($conn);
-}?>
+}
+header('location :home.php');
+?>
