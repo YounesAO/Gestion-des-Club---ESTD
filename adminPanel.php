@@ -71,9 +71,7 @@ $clubId = $_SESSION['user']['role'];
   <h3>Evenement proposés par les membres </h3> <br>
   <div class=" d-flex flex-wrap events">
     <?php events($clubId); ?>
-
-  </div>
-  <div class="card" >
+    <div class="card" >
     <img class="card-img-top" src="images\logo1.png" alt="Card image">
     <div class="card-body">
         <h4 class="card-title">Event</h4>
@@ -84,6 +82,8 @@ $clubId = $_SESSION['user']['role'];
         </div>
     </div>
   </div>
+  </div>
+ 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

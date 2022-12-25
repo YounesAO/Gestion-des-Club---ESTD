@@ -14,7 +14,7 @@ $sql = "DELETE FROM creer  WHERE idClub = '$idClub'";
 $result = mysqli_query($con, $sql);
 
 if ($result) {
-    $sql = "Update etudiant set role '$idClub' where idEtudaint in (select idEtudiant from creer where idClub = '$idClub')";
+    $sql = "Update etudiant set role ='$idClub' where idEtudiant in (select idEtudiant from creer where idClub = '$idClub')";
     mysqli_query($con,$sql);
 
     echo ' successfully';
