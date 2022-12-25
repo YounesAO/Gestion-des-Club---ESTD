@@ -18,8 +18,6 @@ if ($result) {
 } else {
     echo 'Error inserting record: ' . mysqli_error($conn);
 }
-
-
-
+header('location: Service.php');
 
 ?>

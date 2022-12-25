@@ -136,7 +136,7 @@ function events(){
             </div>
 
             <div class="tab-pane content fade" id="request">
-                <h1>requests</h1>
+                <h1>requests de création des clubes</h1>
                 <div class="requests">
                   <?php clubReq();?>
                 </div>

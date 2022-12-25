@@ -7,11 +7,10 @@ require 'Anonces.php';
         header("location: loginPage.php");
     } else {
         $data = $_SESSION['user'];
+        $query = "SELECT nomClub,logo,Slogan FROM club c,integrer i where c.idClub = i.idClub and IdEtudiant = ".$data[0]."";
+        $doQuery = mysqli_query($con,$query);
+        $clubes = mysqli_fetch_all($doQuery,MYSQLI_ASSOC);
     }
-    $query = "SELECT nomClub,logo,description FROM club";
-    $query = "SELECT nomClub,logo,description FROM club c,integrer i where c.idClub = i.idClub and IdEtudiant = ".$data[0]."";
-    $doQuery = mysqli_query($con,$query);
-    $clubes = mysqli_fetch_all($doQuery,MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +76,7 @@ require 'Anonces.php';
                 if ($data['role'] != 0) {
                     echo '
                     <li>
-                        <a href="adminPanel.php"><i class="fa-regular fa-chart-bar fa-fw"></i>control panel</a>
+                        <a href="adminPanel.php"><i class="fa-regular fa-chart-bar fa-fw"></i><span>control panel</span></a>
                     </li>
                     ';
                 }
@@ -140,6 +139,9 @@ require 'Anonces.php';
                     <h1>My Clubs</h1>
                     <a class="btn m-3 align-self-center mr-2 btn-success" href="clubProfil.php">Intégrer <i
                             class="fa fa-plus" aria-hidden="true"></i></a>
+                    <div class="d-none event">
+                        <a href="EventForm.php?idClub=1" class="btn btn-primary" >propose event</a>
+                    </div>
                 </div>
                 <div class="lesClubes">
                 </div>
