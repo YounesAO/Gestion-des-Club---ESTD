@@ -7,7 +7,7 @@ require 'Anonces.php';
         header("location: loginPage.php");
     } else {
         $data = $_SESSION['user'];
-        $query = "SELECT nomClub,logo,Slogan FROM club c,integrer i where c.idClub = i.idClub and IdEtudiant = ".$data[0]."";
+        $query = "SELECT nomClub,logo,Slogan FROM club c,integrer i where valide = 1 and  c.idClub = i.idClub and IdEtudiant = ".$data[0]."";
         $doQuery = mysqli_query($con,$query);
         $clubes = mysqli_fetch_all($doQuery,MYSQLI_ASSOC);
     }
