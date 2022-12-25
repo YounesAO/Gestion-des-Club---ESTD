@@ -10,12 +10,12 @@ export function showClubes(objJson) {
         let h3 = document.createElement("h3");
         h3.textContent = objJson[i].nomClub;
         let p = document.createElement("p");
-        p.textContent = objJson[i].description;
+        p.textContent = objJson[i].Slogan;
         div.appendChild(h3);
         div.appendChild(p);
-        let footer_of_announce = document.querySelector(".footer_of_announce").cloneNode(true);
+        // let footer_of_announce = document.querySelector(".footer_of_announce").cloneNode(true);
         clube.appendChild(div);
-        clube.appendChild(footer_of_announce)
+        // clube.appendChild(footer_of_announce)
         document.querySelector(".lesClubes").prepend(clube)
     }
 }
