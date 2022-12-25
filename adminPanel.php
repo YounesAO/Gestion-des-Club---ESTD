@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'functions.php';
-// $clubId = $_SESSION['user']['role'];
+$clubId = $_SESSION['user']['role'];
 
 ?>
 <!DOCTYPE html>
