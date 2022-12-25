@@ -73,6 +73,15 @@ require 'Anonces.php';
                     <i class="fa-solid fa-bullhorn"></i><span>Inbox</span>
                 </a>
             </li>
+            <?php 
+                if ($data['role'] != 0) {
+                    echo '
+                    <li>
+                        <a href="adminPanel.php"><i class="fa-regular fa-chart-bar fa-fw"></i>control panel</a>
+                    </li>
+                    ';
+                }
+            ?>
             <li>
                 <a href="logout.php"><i class="fa-solid fa-door-closed"></i>Logout</a>
             </li>
@@ -125,47 +134,6 @@ require 'Anonces.php';
                 </div>
             </div>
             <!-- end bienvenue page -->
-            <!-- <div class="tab-pane container active" id="home">
-                <div class="clubs-scroll shadow">
-                    <div class="scroll-item">
-                        <img src="images/logo.png" alt="">
-                    </div>
-                    <div class="scroll-item">
-                        <img src="images/logo.png" alt="">
-                    </div>
-                </div>
-                <div class="first">
-                    <div class="feed">
-                        <div class="post">
-                            <div class="post-head">
-                                <img class='post-logo' src="images/logo.png" alt="logo">
-                                <span class="post-club">ESTD MEDIA</span>
-                            </div>
-                            <div class="post-body">
-                                <img class="post-img" src="images/event2.jpg" alt="postImg">
-                            </div>
-                            <div class="post-footer">
-                            </div>
-                        </div>
-                        <div class="post">
-                            <div class="post-head">
-                                <img class='post-logo' src="images/logo.png" alt="logo">
-                                <span class="post-club">HIGH TECH</span>
-                            </div>
-                            <div class="post-body">
-                                <img class="post-img" src="images/event1.jpg" alt="postImg">
-                            </div>
-                            <div class="post-footer">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur cumque
-                                    omnis a
-                                    alias quaerat. Illum explicabo sint aperiam esse, inventore magni, aspernatur
-                                    maiores
-                                    iure neque minima rem dolor. Nisi?</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <!-- start clubes page -->
             <div class="tab-pane container fade" id="clubs">
                 <div class="d-flex justify-content-between align-items-center">
