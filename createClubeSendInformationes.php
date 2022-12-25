@@ -25,6 +25,7 @@ if ($con) {
         mysqli_query($con,$sql);
         
     }
+    header("location: home.php");
 }
 
 ?>
