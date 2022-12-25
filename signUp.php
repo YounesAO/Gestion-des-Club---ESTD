@@ -103,7 +103,7 @@ require 'dbConnect.php';
                         <input type="submit" value="next" name="Submit" class="submit">
                     </div>
             </form>
-            </div>
+            </div class="d-none">
                 <iframe name="votar" ></iframe>
             </div>
     </div>

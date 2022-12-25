@@ -74,7 +74,7 @@ $i = mysqli_fetch_assoc($result);
                     </div>
                 </div>
                 <div class="container d-flex flex-column cnt">
-                    <img src="images/logo.png" alt="">
+                    <img src="uploads/<?php echo $i['logo'];?>" alt="">
                     <span class="nom p-3 m-1 "><?php echo $i['nomClub'];?></span>
                 </div>
                 

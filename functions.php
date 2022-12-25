@@ -12,9 +12,9 @@ $result = mysqli_query($con, $sqlR);
 if (mysqli_num_rows($result) > 0) {
   // Output the result of the SELECT query
       while($row = mysqli_fetch_assoc($result)) {
-
+        $logo = 'uploads\\'.$row['logo'];
         echo'<div class="card" style="width:250px">
-        <img class="card-img-top" src="images\logo1.png" alt="Card image">
+        <img class="card-img-top" src="';echo$logo.'" alt="Card image">
           <div class="card-body">
             <h4 class="card-title">'.$row['nomClub'].'</h4>
             <p class="card-text">'.$row['Slogan'].'</p>
@@ -45,7 +45,7 @@ function Requests($ram) {
     if (mysqli_num_rows($result1) > 0) {
       // Output the result of the SELECT query
           while($row = mysqli_fetch_assoc($result1)) {
-    
+              
             echo'<div class="card">
             <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
             <div class="card-body">

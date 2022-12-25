@@ -580,7 +580,7 @@ main .content .partOfContent  button {
 .club img {
   width: 100%;
   height: 250px;
-  object-fit: fill;
+  object-fit: scale-down;
   object-position: center;
   border-bottom: 1px #efeff0 solid;
 }

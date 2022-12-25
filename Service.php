@@ -7,29 +7,29 @@ function clubReq(){
   $sql = 'SELECT * FROM creer where idSP is NULL';
   $result = mysqli_query($con, $sql);
   if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        if (is_null($row['idClub']) == false) {
-            $sql1 = "SELECT cl.idClub,nomClub,Slogan,img FROM club cl,creer c,etudiant e 
-                where cl.idClub = c.idClub and e.IdEtudiant = c.IdEtudiant and cl.idClub = ".$row['idClub'].";";
-            $result1 = mysqli_query($con, $sql1);
-            $club = mysqli_fetch_assoc($result1);
-            echo '
-            <div class="card m-1" >
-                <img class="card-img-top" src="imagesOfUsers/'.$club['img'].'" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">';echo $club['nomClub'];echo'</h4>
-                    <p class="card-text">';echo $club['Slogan'];echo'</p>
-                    <div>
-                    <a href="validation.php?value=true&idsp=1&idclub=';echo $club['idClub'];echo'" class="btn btn-primary">Valider</a>
-                    <a href="validation.php?value=false&idsp=1&idclub=';echo $club['idClub'];echo'" class="btn btn-danger">Refuser</a>
-                    </div>
-                </div>
-                </div>';
-        }
-    } 
-    } else {
-        echo '0 Requests';
-    }
+  while ($row = mysqli_fetch_assoc($result)) {
+
+    $sql1 = "SELECT * FROM club where idClub = ".$row['idClub'].";";
+    $result1 = mysqli_query($con, $sql1);
+    $club = mysqli_fetch_assoc($result1);
+    $logo = 'uploads\\'.$club['logo'];
+
+
+  echo '
+  <div class="card m-1" >
+    <img class="card-img-top" src="'.$logo.'" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title">';echo $club['nomClub'];echo'</h4>
+        <p class="card-text">';echo $club['Slogan'];echo'</p>
+        <div>
+        <a href="validation.php?value=true&idsp=1&idclub=';echo $club['idClub'];echo'" class="btn btn-primary">Valider</a>
+        <a href="validation.php?value=false&idsp=1&idclub=';echo $club['idClub'];echo'" class="btn btn-danger">Refuser</a>
+        </div>
+    </div>
+    </div>';
+} }else{echo
+  '0 Requests';
+}
 }
 function events(){
   require 'dbConnect.php';
@@ -89,25 +89,37 @@ function events(){
 </head>
 
 <body>
-    <aside class="bg-w txt-c pd-three txt-cap">
+
+        <!-- <ul class="nav nav-tabs">
+        <li class="nav-item">
         <img src="images/logo.png" alt="" srcset="">
-        <ul>
-            <li>
-                <a data-bs-toggle="tab" href="#Dashboard"> <i class="fa fa-home" aria-hidden="true"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a data-bs-toggle="tab" href="#request"><i class="fa-solid fa-users"></i>
-                    <span>request</span>
-                </a>
-            </li>
-            <li>
-                <a data-bs-toggle="tab" href="#events"><i class="fa-solid fa-square-plus"></i>
-                    <span>events</span></a>
-            </li>
-        </ul>
-    </aside>
+
+        <a class="nav-link active" data-bs-toggle="tab" href="#Dashboard"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#clubs"> <i class="fa fa-user-circle" aria-hidden="true"></i> clubs requests</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#events"><i class="fas fa-newspaper    "></i> events</a></li>
+        <li class="nav-item"><a class='logout nav-link' S href="logout.php"><i class="fas fa-door-open    "></i></a></li>
+
+    </ul> -->
+        <aside class="bg-w txt-c pd-three txt-cap">
+            <img src="images/logo.png" alt="" srcset="">
+            <ul>
+                <li>
+                    <a data-bs-toggle="tab" href="#Dashboard"> <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-bs-toggle="tab" href="#request"><i class="fa-solid fa-users"></i>
+                        <span>request</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-bs-toggle="tab" href="#events"><i class="fa-solid fa-square-plus"></i>
+                        <span>events</span></a>
+                </li>
+            </ul>
+        </aside>
+
     <!-- Tab panes -->
     <main>
         <div class="tab-content">
@@ -136,7 +148,7 @@ function events(){
             </div>
 
             <div class="tab-pane content fade" id="request">
-                <h1>requests de création des clubes</h1>
+                <h1>requests</h1>
                 <div class="requests">
                   <?php clubReq();?>
                 </div>
@@ -195,9 +207,7 @@ function events(){
     };
     new Chart(ctx1, config1);
     </script>
-    </body><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
 </body>
 </script>
 
