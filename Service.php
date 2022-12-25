@@ -12,10 +12,12 @@ function clubReq(){
     $sql1 = "SELECT * FROM club where idClub = ".$row['idClub'].";";
     $result1 = mysqli_query($con, $sql1);
     $club = mysqli_fetch_assoc($result1);
+    $logo = 'uploads\\'.$club['logo'];
+
 
   echo '
   <div class="card m-1" >
-    <img class="card-img-top" src="images\img_avatar1.png" alt="Card image">
+    <img class="card-img-top" src="'.$logo.'" alt="Card image">
     <div class="card-body">
         <h4 class="card-title">';echo $club['nomClub'];echo'</h4>
         <p class="card-text">';echo $club['Slogan'];echo'</p>
