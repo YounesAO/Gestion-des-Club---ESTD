@@ -21,14 +21,16 @@ function myClubs() {
                 <h4 class="card-title">'.$row['nomClub'].'</h4>
                 <p class="card-text">'.$row['Slogan'].'</p>
                 <div>
-                  <a href="integrer?idClub='.$row['idClub'].'" class="btn btn-success" >Join us</a>
+                  <a href="integrer.php?idClub='.$row['idClub'].'" class="btn btn-success" >Join us</a>
                 </div>
               </div>
             </div>
             ';
           }
         } else {
-          echo "0 results";
+          echo '<div class="m-5 text-capitalize">
+                  y\'a pas des clubes à intégrer
+              </div>';
         }
     }
     
@@ -53,8 +55,7 @@ function myClubs() {
             <header>intéger ces clubs</header>
             <div class="container d-flex justify-content-center flex-wrap">
                 <?php myClubs() ?>
-               
-                </div>
+            </div>
         </div>
     </div>
     <!-- end ajouter club -->
