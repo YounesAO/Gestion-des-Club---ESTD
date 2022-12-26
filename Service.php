@@ -35,7 +35,6 @@ function events(){
   require 'dbConnect.php';
     $sqlRe = "SELECT nomEvent,descriptionEvent,ev.idEvenement,nomClub,c.logo,lieu,dateEvent from evenement ev,proposer p,club c 
         WHERE ev.idEvenement = p.idEvenement and c.idClub = p.idClub and valide = 1";
-    echo $sqlRe;
     $result1 = mysqli_query($con, $sqlRe);
   
   // Check if the SELECT query was successful
