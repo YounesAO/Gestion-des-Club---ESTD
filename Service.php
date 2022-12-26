@@ -33,8 +33,10 @@ function clubReq(){
 }
 function events(){
   require 'dbConnect.php';
-  $sqlRe = " select * from evenement   where idEvenement in (select idEvenement from proposer where  valide = 1 );";
-  $result1 = mysqli_query($con, $sqlRe);
+    $sqlRe = "SELECT nomEvent,descriptionEvent,ev.idEvenement,nomClub,c.logo,lieu,dateEvent from evenement ev,proposer p,club c 
+        WHERE ev.idEvenement = p.idEvenement and c.idClub = p.idClub and valide = 1";
+    echo $sqlRe;
+    $result1 = mysqli_query($con, $sqlRe);
   
   // Check if the SELECT query was successful
   if (mysqli_num_rows($result1) > 0) {
@@ -42,10 +44,13 @@ function events(){
         while($row = mysqli_fetch_assoc($result1)) {
 
             echo' <div class="card m-1" >
-            <img class="card-img-top" src="images\logo1.png" alt="Card image">
+            <img class="card-img-top" src="uploads/'.$row['logo'].'" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title">'.$row['nomEvent'].'</h4>
-                <p class="card-text">'.$row['descriptionEvent'].' Proposer par username</p>
+                <p class="card-text">'.$row['descriptionEvent'].'</p>
+                <p class="card-text">Proposer par le club '.$row['nomClub'].' </p>
+                <p class="card-text">sera à '.$row['lieu'].' </p>
+                <p class="card-text">à la date '.$row['dateEvent'].' </p>
                 <div>
                 <a href="approve.php?value=true&eve='.$row['idEvenement'].' " class="btn btn-primary">Valider</a>
                 <a href="approve.php?value=false&eve='.$row['idEvenement'].' " class="btn btn-danger">Refuser</a>
@@ -89,17 +94,6 @@ function events(){
 </head>
 
 <body>
-
-        <!-- <ul class="nav nav-tabs">
-        <li class="nav-item">
-        <img src="images/logo.png" alt="" srcset="">
-
-        <a class="nav-link active" data-bs-toggle="tab" href="#Dashboard"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#clubs"> <i class="fa fa-user-circle" aria-hidden="true"></i> clubs requests</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#events"><i class="fas fa-newspaper    "></i> events</a></li>
-        <li class="nav-item"><a class='logout nav-link' S href="logout.php"><i class="fas fa-door-open    "></i></a></li>
-
-    </ul> -->
         <aside class="bg-w txt-c pd-three txt-cap">
             <img src="images/logo.png" alt="" srcset="">
             <ul>

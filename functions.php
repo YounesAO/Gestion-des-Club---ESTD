@@ -7,6 +7,22 @@ $result = mysqli_query($con, $sqlR);
 $row = mysqli_fetch_assoc($result);
 echo $row['nomClub'];
 }
+function membreDeClubes($clubId) {
+  require 'dbConnect.php';
+  $query = "SELECT sum(valide) as n FROM `integrer` WHERE idClub = $clubId";
+  $result = mysqli_query($con,$query);
+  $row = mysqli_fetch_assoc($result);
+  $nombreDeMembre = $row['n'];
+  echo $nombreDeMembre;
+}
+function nombreDeReq($clubId) {
+  require 'dbConnect.php';
+  $query = "SELECT count(*) as n FROM `integrer` WHERE idClub = $clubId";
+  $result = mysqli_query($con,$query);
+  $row = mysqli_fetch_assoc($result);
+  $nombreDeReq = $row['n'];
+  echo $nombreDeReq;
+}
 function myClubs($para) {
     
   
@@ -72,19 +88,23 @@ function Requests($ram) {
     }
     function events($param){
       require 'dbConnect.php';
-      $sqlRe = " select * from evenement   where idEvenement in (select idEvenement from proposer where idClub =$param and valide = 0 );";
+      // $sqlRe = " select * from evenement   where idEvenement in (select idEvenement from proposer where idClub =$param and valide = 0 );";
+      $sqlRe = "SELECT nomEvent,descriptionEvent,ev.idEvenement,nomEtudiant,prenomEtudiant,e.img,lieu,dateEvent from evenement ev,proposer p,etudiant e 
+        WHERE ev.idEvenement = p.idEvenement and e.idEtudiant = p.idEtudiant and idClub =$param and valide = 0";
       $result1 = mysqli_query($con, $sqlRe);
       
       // Check if the SELECT query was successful
       if (mysqli_num_rows($result1) > 0) {
         // Output the result of the SELECT query
             while($row = mysqli_fetch_assoc($result1)) {
-
                 echo' <div class="card m-1" >
-                <img class="card-img-top" src="images\logo1.png" alt="Card image">
+                <img class="card-img-top" src="imagesOfUsers/'.$row['img'].'" alt="Card image">
                 <div class="card-body">
                     <h4 class="card-title">'.$row['nomEvent'].'</h4>
-                    <p class="card-text">'.$row['descriptionEvent'].' Proposer par username</p>
+                    <p class="card-text">'.$row['descriptionEvent'].'</p>
+                    <p class="card-text">Proposer par '.$row['nomEtudiant'].' '.$row['prenomEtudiant'].'</p>
+                    <p class="card-text">sera à '.$row['lieu'].'</p>
+                    <p class="card-text">à la date '.$row['dateEvent'].'</p>
                     <div>
                     <a href="okToEvent.php?value=true&idClub='.$param.'&eve='.$row['idEvenement'].' " class="btn btn-primary">Valider</a>
                     <a href="okToEvent.php?value=false&idClub='.$param.'&eve='.$row['idEvenement'].' " class="btn btn-danger">Refuser</a>

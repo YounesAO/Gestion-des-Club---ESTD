@@ -4,9 +4,11 @@ session_start();
    $idClub=$_GET['idClub'];
     $nomEvent = $_POST["nomEvent"] ;
     $descriptionEvent = $_POST["descriptionEvent"];
+    $lieu = $_POST['lieu_event'];
+    $date = $_POST['date_event'];
     $idE = $_SESSION['user']['idEtudiant'];
     $idEvent = time(); 
-    $sql = 'INSERT INTO evenement(idEvenement,idEtudiant,nomEvent,descriptionEvent) values ("'.$idEvent.'","'.$idE.'","'.$nomEvent.'","'.$descriptionEvent.'")';
+    $sql = 'INSERT INTO evenement(idEvenement,idEtudiant,nomEvent,descriptionEvent,dateEvent,lieu) values ("'.$idEvent.'","'.$idE.'","'.$nomEvent.'","'.$descriptionEvent.'","'.$date.'","'.$lieu.'")';
     if (mysqli_query($con, $sql)) {
         
         $sql1 = 'INSERT INTO proposer(idEtudiant,idEvenement,idClub) values ("'.$idE.'","'.$idEvent.'","'.$idClub.'")';

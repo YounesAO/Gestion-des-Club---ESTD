@@ -30,9 +30,9 @@ export function afficher_mes_clubes(clubes) {
         p.textContent = club.Slogan;
         div.prepend(h3);
         div.append(p);
-        let divEvent = document.querySelector(".event").cloneNode(true);
-        divEvent.textContent.replace('1',club.idClub);
-        divEvent.classList.remove('d-none');
+        let divEvent = document.createElement('div');
+        divEvent.innerHTML = `<a href="EventForm.php?idClub=${club.idClub}" class="btn btn-primary" >propose event</a>`;
+        divEvent.classList.add('event');
         div.append(divEvent);
         clubDiv.append(div);
         document.querySelector('.lesClubes').append(clubDiv);

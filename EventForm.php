@@ -18,12 +18,10 @@ $idClub=$_GET['idClub'];
         <div class="ajouterClube formStyle container">
             <header>Proposez un evenement</header>
             <form action="proposeEvent.php?idClub=<?php echo $idClub; ?>" method="POST" target="votar" enctype="multipart/form-data">
-           
-                <label for="nomEvent">le nom de l'Event</label>
-                <input type="text" name="nomEvent" placeholder="">
-                <label for="descriptionEvent">la description de l'Event</label>	
-                <textarea name="descriptionEvent" cols="30" rows="10" placeholder="la description de votre Event"></textarea>
-               
+                <input type="text" name="nomEvent" placeholder="le nom de l'Event">
+                <textarea name="descriptionEvent" cols="30" rows="2" placeholder="la description de votre Event"></textarea>
+                <input type="text" name="date_event" placeholder="Date de l'évenènement" onfocus="(this.type='date')">
+                <input type="text" name="lieu_event" placeholder="lieu de l'évenènement">
                 <div class="submitYourField">
                     <input type="submit" name="submit" value="valider" class="submit">
                 </div>

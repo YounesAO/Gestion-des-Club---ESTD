@@ -607,6 +607,7 @@ main .content .partOfContent  button {
   }
   aside ul a {
     margin-bottom: 25px;
+    justify-content: center;
   }
   aside ul li:last-child a {
     flex-direction: column;
