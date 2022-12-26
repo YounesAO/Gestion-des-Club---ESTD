@@ -9,6 +9,8 @@ require 'dbConnect.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentification</title>
+    <link rel="shortcut icon" href="images\logo1.png" type="image/x-icon">
+
     <link rel="stylesheet" href="CSS/loginPageStyle.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
