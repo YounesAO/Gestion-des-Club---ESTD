@@ -76,22 +76,22 @@ require 'dbConnect.php';
                 <div class="carousel-item active">
                     <img src="images/event1.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>forum etudiant à ESTD</h5>
+                        <p>le partage des feed-back avec les nouveaux etudiants</p>
                     </div>
                 </div>
                 <div class="carousel-item active">
                     <img src="images/event2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>Semaine d'integration à ESTD</h5>
+                        <p>le service parascolaire de ESTD organise une semaine d'integration</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="images/visite_estd.jpg" class="d-block mw-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h5>la semaine des clubs a ESTD</h5>
+                        <p>representation des club avec la présence du ministre </p>
                     </div>
                 </div>
             </div>
@@ -119,8 +119,8 @@ require 'dbConnect.php';
                     <div class="announce">
                         <img src="images/event2.jpg" alt="">
                         <div class="p-3">
-                            <h3>test title</h3>
-                            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
+                            <h3>Semaine d'integration à ESTD</h3>
+                            <p>le service parascolaire de ESTD organise une semaine d'integration.</p>
                         </div>
                         <div class="footer_of_announce">
                             <a href="">read more</a>
@@ -130,7 +130,7 @@ require 'dbConnect.php';
                     <div class="announce">
                         <img src="images/event1.jpg" alt="">
                         <div class="p-3">
-                            <h3>test title</h3>
+                            <h3>forum etudiant à ESTD</h3>
                             <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
                         </div>
                         <div class="footer_of_announce">
@@ -141,8 +141,8 @@ require 'dbConnect.php';
                     <div class="announce">
                         <img src="images/visite_estd.jpg" alt="">
                         <div class="p-3">
-                            <h3>test title</h3>
-                            <p>Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consect.</p>
+                            <h3>la semaine des clubs a ESTD</h3>
+                            <p>representation des club avec la présence du ministre </p>
                         </div>
                         <div class="footer_of_announce">
                             <a href="">read more</a>

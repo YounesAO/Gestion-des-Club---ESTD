@@ -63,7 +63,7 @@ require 'dbConnect.php';
     <div class="container_of_container">
         <div class="formStyle container">
             <header>Entrez votre informations</header>
-            <form action="signUpSendInformations.php" method="post" class="formUser" target="votar" enctype="multipart/form-data">
+            <form action="signUpSendInformations.php" method="post" class="formUser"  enctype="multipart/form-data">
                     <input type="text" name="nom" placeholder="Nom">
                     <input type="text" name="prenom" placeholder="Prénom">
                     <input type="text" name="cne" placeholder="code national d'étudiant">

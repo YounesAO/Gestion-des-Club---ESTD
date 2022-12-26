@@ -64,7 +64,7 @@ session_start();
     <div class="container_of_container">
         <div class="ajouterClube formStyle container">
             <header>nouveau clube</header>
-            <form action="createClubeSendInformationes.php" method="POST" target="votar" enctype="multipart/form-data">
+            <form action="createClubeSendInformationes.php" method="POST" enctype="multipart/form-data">
                 <input type="text" name="nomclube" placeholder="nom de clube">
                 <div class="logoDeClube">
                     <input type="file" name="logoDeClube">

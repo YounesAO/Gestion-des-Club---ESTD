@@ -1,7 +1,12 @@
 <?php
 session_start();
+require 'dbConnect.php';
+
 require 'functions.php';
 $clubId = $_SESSION['user']['role'];
+$sql = "SELECT max(dateEvent) as da from evenement where idEvenement in (select idEvenement from organiser where idClub = $clubId)";
+$res = mysqli_query($con,$sql);
+$row = mysqli_fetch_assoc($res);
 
 ?>
 <!DOCTYPE html>
@@ -107,7 +112,7 @@ $clubId = $_SESSION['user']['role'];
                 </div>
                 <div class="stat-widget shadow nextEvent">
                     <p class="nextEventText "><i class="fa fa-calendar" aria-hidden="true"></i> next event </p>
-                    <span class="stat-num date">20-09-2023 </i></span>
+                    <span class="stat-num date"><?php echo $row['da']; ?></i></span>
                 </div>
             </div>
         </div>
