@@ -29,7 +29,7 @@ function myClubs() {
           }
         } else {
           echo '<div class="m-5 text-capitalize">
-                  y\'a pas des clubes à intégrer
+                  y\'a pas des clubs à intégrer
               </div>';
         }
     }

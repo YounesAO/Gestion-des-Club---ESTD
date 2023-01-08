@@ -110,7 +110,7 @@ require 'Anonces.php';
                 <div id="greeting" class="partOfContent">
                     <header class="d-flex justify-content-between align-items-center" style="background:#eee;">
                         <div style="align-self: flex-start;">
-                            <h2>bienvenue</h2>
+                            <h2>Bienvenue</h2>
                             <p class="nom_prenom"></p>
                         </div>
                         <img src="images/welcome.png" alt="welcome">
@@ -123,11 +123,11 @@ require 'Anonces.php';
                                 <p class="prenom"></p>
                             </div>
                             <div>
-                                <span>filière</span>
+                                <span>Filière</span>
                                 <p class="filiere"></p>
                             </div>
                             <div>
-                                <span>niveau</span>
+                                <span>Niveau</span>
                                 <p class="niveau"></p>
                             </div>
                         </div>
@@ -142,7 +142,7 @@ require 'Anonces.php';
                     <a class="btn m-3 align-self-center mr-2 btn-success" href="clubProfil.php">Intégrer <i
                             class="fa fa-plus" aria-hidden="true"></i></a>
                     <div class="d-none event">
-                        <a href="EventForm.php?idClub=1" class="btn btn-primary" >propose event</a>
+                        <a href="EventForm.php?idClub=1" class="btn btn-primary" >Proposer event</a>
                     </div>
                 </div>
                 <div class="lesClubes">

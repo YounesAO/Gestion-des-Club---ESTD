@@ -71,7 +71,7 @@ require 'dbConnect.php';
     </header>
     <div class="les_clubes">
         <div class="container">
-            <h3>les clubes</h3>
+            <h3>les clubs</h3>
         </div>
     </div>
     <div class="Actualités_and_Annonces">
